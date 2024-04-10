@@ -1,0 +1,327 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 AndaleMono;}
+{\colortbl;\red255\green255\blue255;\red47\green255\blue18;\red255\green255\blue255;\red0\green0\blue0;
+\red255\green255\blue255;\red47\green255\blue18;\red47\green255\blue18;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c15436\c99351\c7462;\cssrgb\c100000\c100000\c100000\c0;\cssrgb\c0\c0\c0;
+\cssrgb\c100000\c100000\c99985\c0;\cssrgb\c15436\c99351\c7462;\cssrgb\c15686\c99608\c7843;\csgray\c0\c90000;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Sambanova BERT Homework - Updated the  - - ntasks flag to 32 - Logs below: \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1 \cf2 \cb3 \CocoaLigature0 The authenticity of host 'sambanova.alcf.anl.gov (140.221.69.48)' can't be established.\
+ECDSA key fingerprint is SHA256:PSqzFIu1pTmapooUx014wZJyAk6dX+ujUDAF4TTIZ+M.\
+This key is not known by any other names.\
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes\
+Warning: Permanently added 'sambanova.alcf.anl.gov' (ECDSA) to the list of known hosts.\
+(dd1868@sambanova.alcf.anl.gov) Ubuntu 20.04.6 LTS\
+Password: \
+Welcome to Ubuntu 20.04.6 LTS (GNU/Linux 5.4.0-174-generic x86_64)\
+\
+ * Documentation:  https://help.ubuntu.com\
+ * Management:     https://landscape.canonical.com\
+ * Support:        https://ubuntu.com/pro\
+\
+  System information as of Wed 10 Apr 2024 03:02:30 AM UTC\
+\
+  System load:  0.06               Processes:               304\
+  Usage of /:   30.1% of 23.45GB   Users logged in:         8\
+  Memory usage: 30%                IPv4 address for ens192: 10.230.15.229\
+  Swap usage:   0%                 IPv4 address for ens224: 140.221.69.48\
+\
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s\
+   just raised the bar for easy, resilient and secure K8s cluster deployment.\
+\
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge\
+\
+Expanded Security Maintenance for Applications is not enabled.\
+\
+0 updates can be applied immediately.\
+\
+5 additional security updates can be applied with ESM Apps.\
+Learn more about enabling ESM Apps service at https://ubuntu.com/esm\
+\
+New release '22.04.3 LTS' available.\
+Run 'do-release-upgrade' to upgrade to it.\
+\
+\
+*** System restart required ***\
+\
+The programs included with the Ubuntu system are free software;\
+the exact distribution terms for each program are described in the\
+individual files in /usr/share/doc/*/copyright.\
+\
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by\
+applicable law.\
+\
+dd1868@sn-login-01:~$ ssh sn30-r1-h1\
+The authenticity of host 'sn30-r1-h1 (140.221.82.5)' can't be established.\
+ECDSA key fingerprint is SHA256:NoWZ0yp8fe/Fj/B+pImIF6dpC6cMf3paWGuu0Cm40M4.\
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes\
+Warning: Permanently added 'sn30-r1-h1,140.221.82.5' (ECDSA) to the list of known hosts.\
+Welcome to Ubuntu 20.04.2 LTS (GNU/Linux 5.4.0-147-generic x86_64)\
+\
+ * Documentation:  https://help.ubuntu.com\
+ * Management:     https://landscape.canonical.com\
+ * Support:        https://ubuntu.com/advantage\
+\
+  System information as of Wed 10 Apr 2024 03:02:46 AM UTC\
+\
+  System load:     23.03               IPv4 address for snhni0: 140.221.82.5\
+  Usage of /:      22.8% of 847.12GB   IPv4 address for snni0:  172.16.0.5\
+  Memory usage:    42%                 IPv4 address for snni2:  172.16.0.6\
+  Swap usage:      0%                  IPv4 address for snni4:  172.16.0.7\
+  Processes:       2063                IPv4 address for snni6:  172.16.0.8\
+  Users logged in: 6                   IPv4 address for virbr0: 192.168.122.1\
+\
+0 updates can be installed immediately.\
+0 of these updates are security updates.\
+\
+\
+The list of available updates is more than a week old.\
+To check for new updates run: sudo apt update\
+New release '22.04.3 LTS' available.\
+Run 'do-release-upgrade' to upgrade to it.\
+\
+\
+#################################### Please note update on 12-20-2023 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\
+Now Running Sambaflow 1.17.7-27\
+Acceptance Test scripts are in /data/ANL/scripts.\
+Acceptance Test results are in /data/ANL/results.\
+\
+Older scripts are in /data/ANL/scripts/1.17.4-28\
+\
+see /data/ANL/scripts/model_all_run.sh  for examples on how to run each test.\
+see also /data/ANL/scripts/Readme. \
+\
+snfadm will report 8 RDUS.\
+In 1.16 for the purpose of slurm there were 16 four tile RDUS.  \
+IN 1.17 slurm now thinks that there are 8 RDUs.\
+\
+sinfo -O AllocNodes,GresUsed,Gres,NodeList\
+ALLOCNODES          GRES_USED           GRES                NODELIST            \
+oll                 rdu:0,rdu_mem:0,rdu_rdu:8,rdu_mem:104854sn30-r1-h[1-2],sn30-\
+\
+Now\
+If you compile, then by default you will get a pef that\
+requires 8 tiles and you should use --gres=rdu:1 with sbatch.\
+\
+--nchips=2 will get you a pef that uses 8 tiles.\
+\
+But if you use ---num-tiles=4 you will only use 1/2 an RDU.\
+I do not know how to ask for 1/2.\
+So you will have to use --gres=rdu:1.\
+\
+With multi-node slurm please not the gres value is the\
+number of RDUs per NODE!\
+\
+rick weisner\
+\
+While using bert I discovered that it wanted an environment\
+variable named SOFTWARE_HOME defined. This a bug.\
+As a best practice please use\
+export SOFTWARE_HOME=/opt\
+\
+Since 1.14 there is no longer a common venv. Each model has its own venv.\
+In /opt/sambaflow\
+./apps/private/anl/venv\
+./apps/micros/venv\
+./apps/starters/mlp/venv\
+./apps/starters/lenet/venv\
+./apps/starters/ffn_mnist/venv\
+./apps/starters/logreg/venv\
+./apps/starters/upscalenet/venv\
+./apps/starters/power_pca/venv\
+./apps/image/segmentation_3d/venv\
+./apps/image/deepvit/venv\
+./apps/image/segmentation/venv\
+./apps/image/object_detection/venv\
+./apps/image/classification/venv\
+./apps/recommender/dlrm/venv\
+./apps/recommender/ncf/venv\
+./apps/recommender/deepinterest/venv\
+./apps/nlp/transformers_on_rdu/venv\
+./apps/nlp/transformers_on_rdu/gpt13b/venv\
+./apps/nlp/data_processing/venv\
+\
+If in doubt start with:\
+/opt/sambaflow/apps/private/anl/venv\
+\
+\
+These machines should not be rebooted, they should be reset.\
+\
+power off host\
+  ipmitool -I lanplus -H XX.XX.XX.XX -U xxxxx -P YYYYYYYYYY chassis power soft\
+login to XRDU0\
+  ssh -l UN XX.XX.XX.XX\
+Poweroff xrdus\
+  xrduutil -U UN -P XXXXXXXXXXXXXXXXXX poweroff\
+wait 30 sec\
+  sleep 30\
+poweron the XRDUs\
+  xrduutil -U UN -P XXXXXXXXXXXXX poweron\
+  sleep 30\
+poweron host\
+  ipmitool -I lanplus -H XX.XX.XX.XX -U UN -P YYYYYYYYYY chassis power on  \
+\
+!!!!!!!!!!!!!!!!!!\
+scancel should ran against running jobs.\
+scancel.exe should be ran against pending jobs.\
+\
+\
+Additionally, the `---full` option  helps ensure that the signal is sent to every process in the SLURM job. In general, we recommend using these two options with scancel.\
+\
+scancel --signal=TERM --full\
+\
+scancel now does TERM by default. If you need the old behavior use scancel.exe.\
+#################################### Please note update on 12-20-2023 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\
+Now Running Sambaflow 1.17.7-27\
+Acceptance Test scripts are in /data/ANL/scripts.\
+Acceptance Test results are in /data/ANL/results.\
+\
+Older scripts are in /data/ANL/scripts/1.17.4-28\
+\
+see /data/ANL/scripts/model_all_run.sh  for examples on how to run each test.\
+see also /data/ANL/scripts/Readme. \
+\
+snfadm will report 8 RDUS.\
+In 1.16 for the purpose of slurm there were 16 four tile RDUS.  \
+IN 1.17 slurm now thinks that there are 8 RDUs.\
+\
+sinfo -O AllocNodes,GresUsed,Gres,NodeList\
+ALLOCNODES          GRES_USED           GRES                NODELIST            \
+oll                 rdu:0,rdu_mem:0,rdu_rdu:8,rdu_mem:104854sn30-r1-h[1-2],sn30-\
+\
+Now\
+If you compile, then by default you will get a pef that\
+requires 8 tiles and you should use --gres=rdu:1 with sbatch.\
+\
+--nchips=2 will get you a pef that uses 8 tiles.\
+\
+But if you use ---num-tiles=4 you will only use 1/2 an RDU.\
+I do not know how to ask for 1/2.\
+So you will have to use --gres=rdu:1.\
+\
+With multi-node slurm please not the gres value is the\
+number of RDUs per NODE!\
+\
+rick weisner\
+\
+While using bert I discovered that it wanted an environment\
+variable named SOFTWARE_HOME defined. This a bug.\
+As a best practice please use\
+export SOFTWARE_HOME=/opt\
+\
+Since 1.14 there is no longer a common venv. Each model has its own venv.\
+In /opt/sambaflow\
+./apps/private/anl/venv\
+./apps/micros/venv\
+./apps/starters/mlp/venv\
+./apps/starters/lenet/venv\
+./apps/starters/ffn_mnist/venv\
+./apps/starters/logreg/venv\
+./apps/starters/upscalenet/venv\
+./apps/starters/power_pca/venv\
+./apps/image/segmentation_3d/venv\
+./apps/image/deepvit/venv\
+./apps/image/segmentation/venv\
+./apps/image/object_detection/venv\
+./apps/image/classification/venv\
+./apps/recommender/dlrm/venv\
+./apps/recommender/ncf/venv\
+./apps/recommender/deepinterest/venv\
+./apps/nlp/transformers_on_rdu/venv\
+./apps/nlp/transformers_on_rdu/gpt13b/venv\
+./apps/nlp/data_processing/venv\
+\
+If in doubt start with:\
+/opt/sambaflow/apps/private/anl/venv\
+\
+\
+These machines should not be rebooted, they should be reset.\
+\
+power off host\
+  ipmitool -I lanplus -H XX.XX.XX.XX -U xxxxx -P YYYYYYYYYY chassis power soft\
+login to XRDU0\
+  ssh -l UN XX.XX.XX.XX\
+Poweroff xrdus\
+  xrduutil -U UN -P XXXXXXXXXXXXXXXXXX poweroff\
+wait 30 sec\
+  sleep 30\
+poweron the XRDUs\
+  xrduutil -U UN -P XXXXXXXXXXXXX poweron\
+  sleep 30\
+poweron host\
+  ipmitool -I lanplus -H XX.XX.XX.XX -U UN -P YYYYYYYYYY chassis power on  \
+\
+!!!!!!!!!!!!!!!!!!\
+scancel should ran against running jobs.\
+scancel.exe should be ran against pending jobs.\
+\
+\
+Additionally, the `---full` option  helps ensure that the signal is sent to every process in the SLURM job. In general, we recommend using these two options with scancel.\
+\
+scancel --signal=TERM --full\
+\
+scancel now does TERM by default. If you need the old behavior use scancel.exe.\
+dd1868@sn30-r1-h1:~$ git clone https://github.com/argonne-lcf/ai-science-training-series.git/\
+Cloning into 'ai-science-training-series'...\
+remote: Enumerating objects: 3444, done.\
+remote: Counting objects: 100% (397/397), done.\
+remote: Compressing objects: 100% (167/167), done.\
+remote: Total 3444 (delta 235), reused 370 (delta 226), pack-reused 3047\
+Receiving objects: 100% (3444/3444), 335.01 MiB | 78.23 MiB/s, done.\
+Resolving deltas: 100% (1753/1753), done.\
+Updating files: 100% (415/415), done.\
+dd1868@sn30-r1-h1:~$ cd ai-science-training-series/07_AITestbeds/Sambanova/bert/\
+dd1868@sn30-r1-h1:~/ai-science-training-series/07_AITestbeds/Sambanova/bert$ chmod +x BertLarge.sh\
+dd1868@sn30-r1-h1:~/ai-science-training-series/07_AITestbeds/Sambanova/bert$ ./BertLarge.sh\
+Using /home/dd1868/ai-science-training-series/07_AITestbeds/Sambanova/bert/041024.03/BertLarge.out for output\
+dd1868@sn30-r1-h1:~/ai-science-training-series/07_AITestbeds/Sambanova/bert$ vim BertLarge.sh\
+dd1868@sn30-r1-h1:~/ai-science-training-series/07_AITestbeds/Sambanova/bert$ ./BertLarge.sh\
+Using /home/dd1868/ai-science-training-series/07_AITestbeds/Sambanova/bert/041024.03/BertLarge.out for output\
+/home/dd1868/BertLarge/bertlrg/bertlrg.pef exists\
+dd1868@sn30-r1-h1:~/ai-science-training-series/07_AITestbeds/Sambanova/bert$ ~/slurm-<id>.out\
+-bash: id: No such file or directory\
+dd1868@sn30-r1-h1:~/ai-science-training-series/07_AITestbeds/Sambanova/bert$ ~/slurm-/home/dd1868/ai-science-training-series/07_AITestbeds/Sambanova/bert/041024.03/BertLarge.out.out\
+-bash: /home/dd1868/slurm-/home/dd1868/ai-science-training-series/07_AITestbeds/Sambanova/bert/041024.03/BertLarge.out.out: No such file or directory\
+dd1868@sn30-r1-h1:~/ai-science-training-series/07_AITestbeds/Sambanova/bert$ \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf4 \cb5 \
+Checking the job scheduler: \cf2 \cb3 \
+dd1868@sn30-r1-h1:~$ squeue\
+             JOBID PARTITION                      NAME     USER ST       TIME  NODES NODELIST(REASON)\
+             30975 sambanova          BertLarge_run.sh tnguyent  R       4:18      1 sn30-r1-h1\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf4 \cb5 Attempt at Groq Example:\cf2 \cb3 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf6 dd1868@groq-r01-gn-01:~$ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh\
+--2024-04-10 03:32:21--  https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh\
+Resolving repo.anaconda.com (repo.anaconda.com)... 104.16.130.3, 104.16.131.3, 2606:4700::6810:8303, ...\
+Connecting to repo.anaconda.com (repo.anaconda.com)|104.16.130.3|:443... connected.\
+HTTP request sent, awaiting response... 200 OK\
+Length: 144041912 (137M) [application/octet-stream]\
+Saving to: \'91Miniconda3-latest-Linux-x86_64.sh\'92\
+\
+Miniconda3-latest-L 100%[===================>] 137.37M   379MB/s    in 0.4s    \
+\
+2024-04-10 03:32:22 (379 MB/s) - \'91Miniconda3-latest-Linux-x86_64.sh\'92 saved [144041912/144041912]\
+\
+dd1868@groq-r01-gn-01:~$ bash Miniconda3-latest-Linux-x86_64.sh\
+\
+Welcome to Miniconda3 py312_24.1.2-0\
+\
+In order to continue the installation process, please review the license\
+agreement.\
+Please, press ENTER to continue\
+>>> \
+END USER LICENSE AGREEMENT\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf2 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf7 \cb8 \
+}
