@@ -1,0 +1,499 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 AndaleMono;}
+{\colortbl;\red255\green255\blue255;\red45\green255\blue16;\red0\green0\blue0;\red47\green255\blue18;
+\red255\green255\blue255;\red179\green36\blue25;\red158\green160\blue28;\red64\green12\blue219;\red46\green174\blue188;
+\red46\green179\blue29;\red45\green255\blue16;\red0\green0\blue0;\red47\green255\blue18;\red0\green0\blue0;
+}
+{\*\expandedcolortbl;;\cssrgb\c14680\c98575\c6314;\cssrgb\c0\c1\c1;\cssrgb\c15436\c99351\c7462;
+\cssrgb\c100000\c100000\c100000\c0;\cssrgb\c76351\c21586\c12321;\cssrgb\c68245\c67745\c13858;\cssrgb\c32648\c19049\c88589;\cssrgb\c20339\c73428\c78412;
+\cssrgb\c20091\c73744\c14703;\cssrgb\c14680\c98575\c6314;\cssrgb\c0\c1\c1;\cssrgb\c15686\c99608\c7843;\csgray\c0\c90000;
+}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs72 \cf2 \cb3 \CocoaLigature0 1st Attempt: 
+\fs24 \cf4 \cb5 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf4 Last login: Wed Apr 10 01:02:17 2024 from c-76-110-54-215.hsd1.fl.comcast.net\
+dd1868@polaris-login-04:~> qsub -A ALCFAITP -q debug -l select=2 -l walltime=01:00:00,filesystems=eagle:home -I\
+qsub: waiting for job 1830994.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov to start\
+qsub: job 1830994.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov ready\
+\
+dd1868@x3111c0s13b0n0:~> module load conda/2023-10-04\
+\
+Lmod is automatically replacing "nvhpc/22.11" with "gcc/12.2.0".\
+\
+\
+Lmod is automatically replacing "PrgEnv-nvhpc/8.3.3" with "PrgEnv-gnu/8.3.3".\
+\
+\
+Due to MODULEPATH changes, the following have been reloaded:\
+  1) cray-mpich/8.1.25\
+\
+dd1868@x3111c0s13b0n0:~> git clone https://github.com/saforem2/wordplay\
+fatal: destination path 'wordplay' already exists and is not an empty directory.\
+dd1868@x3111c0s13b0n0:~> cd wordplay\
+dd1868@x3111c0s13b0n0:~/wordplay> mkdir -p venvs/polaris/2023-10-04\
+tem-site-packagesb0n0:~/wordplay> python3 -m venv venvs/polaris/2023-10-04 --syst\
+dd1868@x3111c0s13b0n0:~/wordplay> source venvs/polaris/2023-10-04/bin/activate\
+(2023-10-04) dd1868@x3111c0s13b0n0:~/wordplay> python3 -m pip install -e "."\
+Obtaining file:///home/dd1868/wordplay\
+  Installing build dependencies ... done\
+  Checking if build backend supports build_editable ... done\
+  Getting requirements to build editable ... done\
+  Preparing editable metadata (pyproject.toml) ... done\
+Collecting ambivalent@ git+https://github.com/saforem2/ambivalent\
+  Cloning https://github.com/saforem2/ambivalent to /var/tmp/pbs.1830994.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-install-n6w78hy6/ambivalent_36e3528cf42f4828adcf1fa7cfd64539\
+  Running command git clone --filter=blob:none -q https://github.com/saforem2/ambivalent /var/tmp/pbs.1830994.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-install-n6w78hy6/ambivalent_36e3528cf42f4828adcf1fa7cfd64539\
+  Resolved https://github.com/saforem2/ambivalent to commit e130acf2ae471b2a4768dcb48e680187ce6bb716\
+  Installing build dependencies ... done\
+  Getting requirements to build wheel ... done\
+  Preparing metadata (pyproject.toml) ... done\
+Collecting ezpz@ git+https://github.com/saforem2/ezpz\
+  Cloning https://github.com/saforem2/ezpz to /var/tmp/pbs.1830994.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-install-n6w78hy6/ezpz_8e376461287c4d48973c14cd504781f2\
+  Running command git clone --filter=blob:none -q https://github.com/saforem2/ezpz /var/tmp/pbs.1830994.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-install-n6w78hy6/ezpz_8e376461287c4d48973c14cd504781f2\
+  Resolved https://github.com/saforem2/ezpz to commit 33eac6d48ebe3194aadb242f3680f9985894be61\
+  Installing build dependencies ... done\
+  Getting requirements to build wheel ... done\
+  Preparing metadata (pyproject.toml) ... done\
+Collecting enrich@ git+https://github.com/saforem2/enrich\
+  Cloning https://github.com/saforem2/enrich to /var/tmp/pbs.1830994.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-install-n6w78hy6/enrich_3c9daed335b9425784beee49b5a5a88c\
+  Running command git clone --filter=blob:none -q https://github.com/saforem2/enrich /var/tmp/pbs.1830994.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-install-n6w78hy6/enrich_3c9daed335b9425784beee49b5a5a88c\
+  Resolved https://github.com/saforem2/enrich to commit 7bad3a1a5bb6205ae9526af93aef6e4078241016\
+  Installing build dependencies ... error\
+\cf6   ERROR: Command errored out with exit status 1:\cf4 \
+\cf6    command: /home/dd1868/wordplay/venvs/polaris/2023-10-04/bin/python3 /home/dd1868/wordplay/venvs/polaris/2023-10-04/lib64/python3.6/site-packages/pip install --ignore-installed --no-user --prefix /var/tmp/pbs.1830994.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-build-env-9qznie_r/overlay --no-warn-script-location --no-binary :none: --only-binary :none: -i https://pypi.org/simple -- 'setuptools >= 61.0' 'setuptools_scm[toml] >= 7.0.0'\cf4 \
+\cf6        cwd: None\cf4 \
+\cf6   Complete output (2 lines):\cf4 \
+\cf6   ERROR: Could not find a version that satisfies the requirement setuptools>=61.0 (from versions: 0.6b1, 0.6b2, 0.6b3, 0.6b4, 0.6rc1, 0.6rc2, 0.6rc3, 0.6rc4, 0.6rc5, 0.6rc6, 0.6rc7, 0.6rc8, 0.6rc9, 0.6rc10, 0.6rc11, 0.7.2, 0.7.3, 0.7.4, 0.7.5, 0.7.6, 0.7.7, 0.7.8, 0.8, 0.9, 0.9.1, 0.9.2, 0.9.3, 0.9.4, 0.9.5, 0.9.6, 0.9.7, 0.9.8, 1.0, 1.1, 1.1.1, 1.1.2, 1.1.3, 1.1.4, 1.1.5, 1.1.6, 1.1.7, 1.2, 1.3, 1.3.1, 1.3.2, 1.4, 1.4.1, 1.4.2, 2.0, 2.0.1, 2.0.2, 2.1, 2.1.1, 2.1.2, 2.2, 3.0, 3.0.1, 3.0.2, 3.1, 3.2, 3.3, 3.4, 3.4.1, 3.4.2, 3.4.3, 3.4.4, 3.5, 3.5.1, 3.5.2, 3.6, 3.7, 3.7.1, 3.8, 3.8.1, 4.0, 4.0.1, 5.0, 5.0.1, 5.0.2, 5.1, 5.2, 5.3, 5.4, 5.4.1, 5.4.2, 5.5, 5.5.1, 5.6, 5.7, 5.8, 6.0.1, 6.0.2, 6.1, 7.0, 8.0, 8.0.1, 8.0.2, 8.0.3, 8.0.4, 8.1, 8.2, 8.2.1, 8.3, 9.0, 9.0.1, 9.1, 10.0, 10.0.1, 10.1, 10.2, 10.2.1, 11.0, 11.1, 11.2, 11.3, 11.3.1, 12.0, 12.0.1, 12.0.2, 12.0.3, 12.0.4, 12.0.5, 12.1, 12.2, 12.3, 12.4, 13.0.1, 13.0.2, 14.0, 14.1, 14.1.1, 14.2, 14.3, 14.3.1, 15.0, 15.1, 15.2, 16.0, 17.0, 17.1, 17.1.1, 18.0, 18.0.1, 18.1, 18.2, 18.3, 18.3.1, 18.3.2, 18.4, 18.5, 18.6, 18.6.1, 18.7, 18.7.1, 18.8, 18.8.1, 19.0, 19.1, 19.1.1, 19.2, 19.3, 19.4, 19.4.1, 19.5, 19.6, 19.6.1, 19.6.2, 19.7, 20.0, 20.1, 20.1.1, 20.2.2, 20.3, 20.3.1, 20.4, 20.6.6, 20.6.7, 20.6.8, 20.7.0, 20.8.0, 20.8.1, 20.9.0, 20.10.1, 21.0.0, 21.1.0, 21.2.0, 21.2.1, 21.2.2, 22.0.0, 22.0.1, 22.0.2, 22.0.4, 22.0.5, 23.0.0, 23.1.0, 23.2.0, 23.2.1, 24.0.0, 24.0.1, 24.0.2, 24.0.3, 24.1.0, 24.1.1, 24.2.0, 24.2.1, 24.3.0, 24.3.1, 25.0.0, 25.0.1, 25.0.2, 25.1.0, 25.1.1, 25.1.2, 25.1.3, 25.1.4, 25.1.5, 25.1.6, 25.2.0, 25.3.0, 25.4.0, 26.0.0, 26.1.0, 26.1.1, 27.0.0, 27.1.0, 27.1.2, 27.2.0, 27.3.0, 27.3.1, 28.0.0, 28.1.0, 28.2.0, 28.3.0, 28.4.0, 28.5.0, 28.6.0, 28.6.1, 28.7.0, 28.7.1, 28.8.0, 28.8.1, 29.0.0, 29.0.1, 30.0.0, 30.1.0, 30.2.0, 30.2.1, 30.3.0, 30.4.0, 31.0.0, 31.0.1, 32.0.0, 32.1.0, 32.1.1, 32.1.2, 32.1.3, 32.2.0, 32.3.0, 32.3.1, 33.1.0, 33.1.1, 34.0.0, 34.0.1, 34.0.2, 34.0.3, 34.1.0, 34.1.1, 34.2.0, 34.3.0, 34.3.1, 34.3.2, 34.3.3, 34.4.0, 34.4.1, 35.0.0, 35.0.1, 35.0.2, 36.0.1, 36.1.0, 36.1.1, 36.2.0, 36.2.1, 36.2.2, 36.2.3, 36.2.4, 36.2.5, 36.2.6, 36.2.7, 36.3.0, 36.4.0, 36.5.0, 36.6.0, 36.6.1, 36.7.0, 36.7.1, 36.7.2, 36.8.0, 37.0.0, 38.0.0, 38.1.0, 38.2.0, 38.2.1, 38.2.3, 38.2.4, 38.2.5, 38.3.0, 38.4.0, 38.4.1, 38.5.0, 38.5.1, 38.5.2, 38.6.0, 38.6.1, 38.7.0, 39.0.0, 39.0.1, 39.1.0, 39.2.0, 40.0.0, 40.1.0, 40.1.1, 40.2.0, 40.3.0, 40.4.0, 40.4.1, 40.4.2, 40.4.3, 40.5.0, 40.6.0, 40.6.1, 40.6.2, 40.6.3, 40.7.0, 40.7.1, 40.7.2, 40.7.3, 40.8.0, 40.9.0, 41.0.0, 41.0.1, 41.1.0, 41.2.0, 41.3.0, 41.4.0, 41.5.0, 41.5.1, 41.6.0, 42.0.0, 42.0.1, 42.0.2, 43.0.0, 44.0.0, 44.1.0, 44.1.1, 45.0.0, 45.1.0, 45.2.0, 45.3.0, 46.0.0, 46.1.0, 46.1.1, 46.1.2, 46.1.3, 46.2.0, 46.3.0, 46.3.1, 46.4.0, 47.0.0, 47.1.0, 47.1.1, 47.2.0, 47.3.0, 47.3.1, 47.3.2, 48.0.0, 49.0.0, 49.0.1, 49.1.0, 49.1.1, 49.1.2, 49.1.3, 49.2.0, 49.2.1, 49.3.0, 49.3.1, 49.3.2, 49.4.0, 49.5.0, 49.6.0, 50.0.0, 50.0.1, 50.0.2, 50.0.3, 50.1.0, 50.2.0, 50.3.0, 50.3.1, 50.3.2, 51.0.0, 51.1.0, 51.1.0.post20201221, 51.1.1, 51.1.2, 51.2.0, 51.3.0, 51.3.1, 51.3.2, 51.3.3, 52.0.0, 53.0.0, 53.1.0, 54.0.0, 54.1.0, 54.1.1, 54.1.2, 54.1.3, 54.2.0, 56.0.0, 56.1.0, 56.2.0, 57.0.0, 57.1.0, 57.2.0, 57.3.0, 57.4.0, 57.5.0, 58.0.0, 58.0.1, 58.0.2, 58.0.3, 58.0.4, 58.1.0, 58.2.0, 58.3.0, 58.4.0, 58.5.0, 58.5.1, 58.5.2, 58.5.3, 59.0.1, 59.1.0, 59.1.1, 59.2.0, 59.3.0, 59.4.0, 59.5.0, 59.6.0)\cf4 \
+\cf6   ERROR: No matching distribution found for setuptools>=61.0\cf4 \
+\cf6   ----------------------------------------\cf4 \
+\cf7 WARNING: Discarding git+https://github.com/saforem2/enrich. Command errored out with exit status 1: /home/dd1868/wordplay/venvs/polaris/2023-10-04/bin/python3 /home/dd1868/wordplay/venvs/polaris/2023-10-04/lib64/python3.6/site-packages/pip install --ignore-installed --no-user --prefix /var/tmp/pbs.1830994.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-build-env-9qznie_r/overlay --no-warn-script-location --no-binary :none: --only-binary :none: -i https://pypi.org/simple -- 'setuptools >= 61.0' 'setuptools_scm[toml] >= 7.0.0' Check the logs for full command output.\cf4 \
+Collecting datasets\
+  Downloading datasets-2.4.0-py3-none-any.whl (365 kB)\
+     |\uc0\u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 | 365 kB 6.6 MB/s            \
+Collecting rich\
+  Using cached rich-12.6.0-py3-none-any.whl (237 kB)\
+Collecting transformers\
+  Using cached transformers-4.18.0-py3-none-any.whl (4.0 MB)\
+Collecting hydra-colorlog\
+  Downloading hydra_colorlog-1.2.0-py3-none-any.whl (3.6 kB)\
+\cf6 ERROR: Could not find a version that satisfies the requirement enrich (unavailable) (from wordplay) (from versions: 0.1.dev1, 1.0, 1.1, 1.2, 1.2.1, 1.2.2, 1.2.3, 1.2.4, 1.2.5, 1.2.6, 1.2.7)\cf4 \
+\cf6 ERROR: No matching distribution found for enrich (unavailable)\cf4 \
+rem2/ezpz04) dd1868@x3111c0s13b0n0:~/wordplay> git clone https://github.com/safor\
+fatal: destination path 'ezpz' already exists and is not an empty directory.\
+ev]"3-10-04) dd1868@x3111c0s13b0n0:~/wordplay> python3 -m pip install -e "ezpz[de\
+Obtaining file:///home/dd1868/wordplay/ezpz\
+  Installing build dependencies ... done\
+  Checking if build backend supports build_editable ... done\
+  Getting requirements to build editable ... done\
+  Preparing editable metadata (pyproject.toml) ... done\
+Collecting enrich@ git+https://github.com/saforem2/enrich\
+  Cloning https://github.com/saforem2/enrich to /var/tmp/pbs.1830994.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-install-2hc0wf71/enrich_f53c75f39d014f2b8f944c9a38427d1a\
+  Running command git clone --filter=blob:none -q https://github.com/saforem2/enrich /var/tmp/pbs.1830994.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-install-2hc0wf71/enrich_f53c75f39d014f2b8f944c9a38427d1a\
+  Resolved https://github.com/saforem2/enrich to commit 7bad3a1a5bb6205ae9526af93aef6e4078241016\
+  Installing build dependencies ... error\
+\cf6   ERROR: Command errored out with exit status 1:\cf4 \
+\cf6    command: /home/dd1868/wordplay/venvs/polaris/2023-10-04/bin/python3 /home/dd1868/wordplay/venvs/polaris/2023-10-04/lib64/python3.6/site-packages/pip install --ignore-installed --no-user --prefix /var/tmp/pbs.1830994.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-build-env-k5_uvfiz/overlay --no-warn-script-location --no-binary :none: --only-binary :none: -i https://pypi.org/simple -- 'setuptools >= 61.0' 'setuptools_scm[toml] >= 7.0.0'\cf4 \
+\cf6        cwd: None\cf4 \
+\cf6   Complete output (2 lines):\cf4 \
+\cf6   ERROR: Could not find a version that satisfies the requirement setuptools>=61.0 (from versions: 0.6b1, 0.6b2, 0.6b3, 0.6b4, 0.6rc1, 0.6rc2, 0.6rc3, 0.6rc4, 0.6rc5, 0.6rc6, 0.6rc7, 0.6rc8, 0.6rc9, 0.6rc10, 0.6rc11, 0.7.2, 0.7.3, 0.7.4, 0.7.5, 0.7.6, 0.7.7, 0.7.8, 0.8, 0.9, 0.9.1, 0.9.2, 0.9.3, 0.9.4, 0.9.5, 0.9.6, 0.9.7, 0.9.8, 1.0, 1.1, 1.1.1, 1.1.2, 1.1.3, 1.1.4, 1.1.5, 1.1.6, 1.1.7, 1.2, 1.3, 1.3.1, 1.3.2, 1.4, 1.4.1, 1.4.2, 2.0, 2.0.1, 2.0.2, 2.1, 2.1.1, 2.1.2, 2.2, 3.0, 3.0.1, 3.0.2, 3.1, 3.2, 3.3, 3.4, 3.4.1, 3.4.2, 3.4.3, 3.4.4, 3.5, 3.5.1, 3.5.2, 3.6, 3.7, 3.7.1, 3.8, 3.8.1, 4.0, 4.0.1, 5.0, 5.0.1, 5.0.2, 5.1, 5.2, 5.3, 5.4, 5.4.1, 5.4.2, 5.5, 5.5.1, 5.6, 5.7, 5.8, 6.0.1, 6.0.2, 6.1, 7.0, 8.0, 8.0.1, 8.0.2, 8.0.3, 8.0.4, 8.1, 8.2, 8.2.1, 8.3, 9.0, 9.0.1, 9.1, 10.0, 10.0.1, 10.1, 10.2, 10.2.1, 11.0, 11.1, 11.2, 11.3, 11.3.1, 12.0, 12.0.1, 12.0.2, 12.0.3, 12.0.4, 12.0.5, 12.1, 12.2, 12.3, 12.4, 13.0.1, 13.0.2, 14.0, 14.1, 14.1.1, 14.2, 14.3, 14.3.1, 15.0, 15.1, 15.2, 16.0, 17.0, 17.1, 17.1.1, 18.0, 18.0.1, 18.1, 18.2, 18.3, 18.3.1, 18.3.2, 18.4, 18.5, 18.6, 18.6.1, 18.7, 18.7.1, 18.8, 18.8.1, 19.0, 19.1, 19.1.1, 19.2, 19.3, 19.4, 19.4.1, 19.5, 19.6, 19.6.1, 19.6.2, 19.7, 20.0, 20.1, 20.1.1, 20.2.2, 20.3, 20.3.1, 20.4, 20.6.6, 20.6.7, 20.6.8, 20.7.0, 20.8.0, 20.8.1, 20.9.0, 20.10.1, 21.0.0, 21.1.0, 21.2.0, 21.2.1, 21.2.2, 22.0.0, 22.0.1, 22.0.2, 22.0.4, 22.0.5, 23.0.0, 23.1.0, 23.2.0, 23.2.1, 24.0.0, 24.0.1, 24.0.2, 24.0.3, 24.1.0, 24.1.1, 24.2.0, 24.2.1, 24.3.0, 24.3.1, 25.0.0, 25.0.1, 25.0.2, 25.1.0, 25.1.1, 25.1.2, 25.1.3, 25.1.4, 25.1.5, 25.1.6, 25.2.0, 25.3.0, 25.4.0, 26.0.0, 26.1.0, 26.1.1, 27.0.0, 27.1.0, 27.1.2, 27.2.0, 27.3.0, 27.3.1, 28.0.0, 28.1.0, 28.2.0, 28.3.0, 28.4.0, 28.5.0, 28.6.0, 28.6.1, 28.7.0, 28.7.1, 28.8.0, 28.8.1, 29.0.0, 29.0.1, 30.0.0, 30.1.0, 30.2.0, 30.2.1, 30.3.0, 30.4.0, 31.0.0, 31.0.1, 32.0.0, 32.1.0, 32.1.1, 32.1.2, 32.1.3, 32.2.0, 32.3.0, 32.3.1, 33.1.0, 33.1.1, 34.0.0, 34.0.1, 34.0.2, 34.0.3, 34.1.0, 34.1.1, 34.2.0, 34.3.0, 34.3.1, 34.3.2, 34.3.3, 34.4.0, 34.4.1, 35.0.0, 35.0.1, 35.0.2, 36.0.1, 36.1.0, 36.1.1, 36.2.0, 36.2.1, 36.2.2, 36.2.3, 36.2.4, 36.2.5, 36.2.6, 36.2.7, 36.3.0, 36.4.0, 36.5.0, 36.6.0, 36.6.1, 36.7.0, 36.7.1, 36.7.2, 36.8.0, 37.0.0, 38.0.0, 38.1.0, 38.2.0, 38.2.1, 38.2.3, 38.2.4, 38.2.5, 38.3.0, 38.4.0, 38.4.1, 38.5.0, 38.5.1, 38.5.2, 38.6.0, 38.6.1, 38.7.0, 39.0.0, 39.0.1, 39.1.0, 39.2.0, 40.0.0, 40.1.0, 40.1.1, 40.2.0, 40.3.0, 40.4.0, 40.4.1, 40.4.2, 40.4.3, 40.5.0, 40.6.0, 40.6.1, 40.6.2, 40.6.3, 40.7.0, 40.7.1, 40.7.2, 40.7.3, 40.8.0, 40.9.0, 41.0.0, 41.0.1, 41.1.0, 41.2.0, 41.3.0, 41.4.0, 41.5.0, 41.5.1, 41.6.0, 42.0.0, 42.0.1, 42.0.2, 43.0.0, 44.0.0, 44.1.0, 44.1.1, 45.0.0, 45.1.0, 45.2.0, 45.3.0, 46.0.0, 46.1.0, 46.1.1, 46.1.2, 46.1.3, 46.2.0, 46.3.0, 46.3.1, 46.4.0, 47.0.0, 47.1.0, 47.1.1, 47.2.0, 47.3.0, 47.3.1, 47.3.2, 48.0.0, 49.0.0, 49.0.1, 49.1.0, 49.1.1, 49.1.2, 49.1.3, 49.2.0, 49.2.1, 49.3.0, 49.3.1, 49.3.2, 49.4.0, 49.5.0, 49.6.0, 50.0.0, 50.0.1, 50.0.2, 50.0.3, 50.1.0, 50.2.0, 50.3.0, 50.3.1, 50.3.2, 51.0.0, 51.1.0, 51.1.0.post20201221, 51.1.1, 51.1.2, 51.2.0, 51.3.0, 51.3.1, 51.3.2, 51.3.3, 52.0.0, 53.0.0, 53.1.0, 54.0.0, 54.1.0, 54.1.1, 54.1.2, 54.1.3, 54.2.0, 56.0.0, 56.1.0, 56.2.0, 57.0.0, 57.1.0, 57.2.0, 57.3.0, 57.4.0, 57.5.0, 58.0.0, 58.0.1, 58.0.2, 58.0.3, 58.0.4, 58.1.0, 58.2.0, 58.3.0, 58.4.0, 58.5.0, 58.5.1, 58.5.2, 58.5.3, 59.0.1, 59.1.0, 59.1.1, 59.2.0, 59.3.0, 59.4.0, 59.5.0, 59.6.0)\cf4 \
+\cf6   ERROR: No matching distribution found for setuptools>=61.0\cf4 \
+\cf6   ----------------------------------------\cf4 \
+\cf7 WARNING: Discarding git+https://github.com/saforem2/enrich. Command errored out with exit status 1: /home/dd1868/wordplay/venvs/polaris/2023-10-04/bin/python3 /home/dd1868/wordplay/venvs/polaris/2023-10-04/lib64/python3.6/site-packages/pip install --ignore-installed --no-user --prefix /var/tmp/pbs.1830994.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-build-env-k5_uvfiz/overlay --no-warn-script-location --no-binary :none: --only-binary :none: -i https://pypi.org/simple -- 'setuptools >= 61.0' 'setuptools_scm[toml] >= 7.0.0' Check the logs for full command output.\cf4 \
+Collecting ambivalent@ git+https://github.com/saforem2/ambivalent\
+  Cloning https://github.com/saforem2/ambivalent to /var/tmp/pbs.1830994.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-install-2hc0wf71/ambivalent_5515bbefafa5423bafa9cc4659f4b01d\
+  Running command git clone --filter=blob:none -q https://github.com/saforem2/ambivalent /var/tmp/pbs.1830994.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-install-2hc0wf71/ambivalent_5515bbefafa5423bafa9cc4659f4b01d\
+  Resolved https://github.com/saforem2/ambivalent to commit e130acf2ae471b2a4768dcb48e680187ce6bb716\
+  Installing build dependencies ... done\
+  Getting requirements to build wheel ... done\
+  Preparing metadata (pyproject.toml) ... done\
+Collecting rich\
+  Using cached rich-12.6.0-py3-none-any.whl (237 kB)\
+Collecting joblib\
+  Using cached joblib-1.1.1-py2.py3-none-any.whl (309 kB)\
+Collecting sh\
+  Downloading sh-1.14.3.tar.gz (62 kB)\
+     |\uc0\u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 | 62 kB 839 kB/s             \
+  Preparing metadata (setup.py) ... done\
+Collecting hydra-core\
+  Downloading hydra_core-1.3.2-py3-none-any.whl (154 kB)\
+     |\uc0\u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 | 154 kB 10.2 MB/s            \
+Collecting jax\
+  Downloading jax-0.2.17.tar.gz (693 kB)\
+     |\uc0\u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 | 693 kB 63.8 MB/s            \
+  Preparing metadata (setup.py) ... done\
+Collecting hydra-colorlog\
+  Using cached hydra_colorlog-1.2.0-py3-none-any.whl (3.6 kB)\
+\cf6 ERROR: Could not find a version that satisfies the requirement jaxlib (from ezpz[dev]) (from versions: none)\cf4 \
+\cf6 ERROR: No matching distribution found for jaxlib\cf4 \
+nv > /tmp/savejobenv.log 2>&13b0n0:~/wordplay> source ezpz/src/ezpz/bin/savejoben\
+nv > /tmp/savejobenv.log 2>&13b0n0:~/wordplay> source ezpz/src/ezpz/bin/savejoben\
+v2023-10-04) dd1868@x3111c0s13b0n0:~/wordplay> source ezpz/src/ezpz/bin/getjobenv\
+\uc0\u9484 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \
+\uc0\u9474  [Hosts]: \
+\uc0\u9474      \'95 [host:0] - \cf8 x3111c0s13b0n0.hsn.cm.polaris.alcf.anl.gov\cf4 \
+\uc0\u9474      \'95 [host:1] - \cf8 x3111c0s13b1n0.hsn.cm.polaris.alcf.anl.gov\cf4 \
+\uc0\u9492 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \
+\uc0\u9484 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \
+\uc0\u9474  [DIST INFO]: \
+\uc0\u9474      \'95 Loading job env from: /home/dd1868/.pbsenv\
+\uc0\u9474      \'95 HOSTFILE: /var/spool/pbs/aux/1830994.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov\
+\uc0\u9474      \'95 NHOSTS: 2\
+\uc0\u9474      \'95 NGPU_PER_HOST: 4\
+\uc0\u9474      \'95 NGPUS (NHOSTS x NGPU_PER_HOST): 8\
+\uc0\u9474      \'95 \cf6 WORLD_SIZE\cf4 : \cf9 8\cf4 \
+\uc0\u9474      \'95 DIST_LAUNCH: \cf7 mpiexec --verbose --envall -n 8 -ppn 4 --hostfile /var/spool/pbs/aux/1830994.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov\cf4 \
+\uc0\u9492 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \
+\uc0\u9484 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \
+\uc0\u9474  [Launch]:\
+\uc0\u9474      \'95 Use: '\cf10 launch\cf4 ' (=\cf10 mpiexec --verbose --envall -n 8 -ppn 4 --hostfile /var/spool/pbs/aux/1830994.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov\cf4 )\
+\uc0\u9474        to launch job\
+\uc0\u9492 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \
+pare.py0-04) dd1868@x3111c0s13b0n0:~/wordplay> python3 data/shakespeare_char/prep\
+  File "data/shakespeare_char/prepare.py", line 7\
+    from __future__ import absolute_import, annotations, division, print_function\
+    ^\
+SyntaxError: future feature annotations is not defined\
+pare.py0-04) dd1868@x3111c0s13b0n0:~/wordplay> python3 data/shakespeare_char/prep\
+  File "data/shakespeare_char/prepare.py", line 7\
+    from __future__ import absolute_import, annotations, division, print_function\
+    ^\
+SyntaxError: future feature annotations is not defined\
+1,115,39404) dd1868@x3111c0s13b0n0:~/wordplay> length of dataset in characters: 1\
+If 'length' is not a typo you can use command-not-found to lookup the package that contains it, like this:\
+    cnf length\
+(2023-10-04) dd1868@x3111c0s13b0n0:~/wordplay> all the unique characters:\
+If 'all' is not a typo you can use command-not-found to lookup the package that contains it, like this:\
+    cnf all\
+VWXYZabcdefghijklmnopqrstuvwxyz0n0:~/wordplay>  !$&',-.3:;?ABCDEFGHIJKLMNOPQRSTUV\
+ characters:&',-.3:;?ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz\
+> vocab size: 65\
+> train has 1,003,854 tokens\
+> val has 111,540 tokens\
+> python3 data/shakespeare_char/prepare.py\
+> \
+> ^C\
+pare.py0-04) dd1868@x3111c0s13b0n0:~/wordplay> python3 data/shakespeare_char/prep\
+  File "data/shakespeare_char/prepare.py", line 7\
+    from __future__ import absolute_import, annotations, division, print_function\
+    ^\
+SyntaxError: future feature annotations is not defined\
+(2023-10-04) dd1868@x3111c0s13b0n0:~/wordplay> cd src/wordplay\
+s=100 train.log_interval=5 train.compile=falsee train.backend=DDP train.max_iters\
+Connected to tcp://x3111c0s13b0n0.hsn.cm.polaris.alcf.anl.gov:7919\
+Found executable /home/dd1868/wordplay/venvs/polaris/2023-10-04/bin/python3\
+Launching application 98ddbe85-a442-4ced-95d2-883afe757207\
+  File "__main__.py", line 7\
+    from __future__ import (\
+    ^\
+SyntaxError: future feature annotations is not defined\
+x3111c0s13b0n0.hsn.cm.polaris.alcf.anl.gov: rank 0 exited with code 1\
+x3111c0s13b0n0.hsn.cm.polaris.alcf.anl.gov: rank 1 died from signal 15\
+x3111c0s13b0n0.hsn.cm.polaris.alcf.anl.gov: rank 2 died from signal 15\
+x3111c0s13b1n0.hsn.cm.polaris.alcf.anl.gov: rank 7 died from signal 15\
+x3111c0s13b0n0.hsn.cm.polaris.alcf.anl.gov: rank 3 died from signal 15\
+x3111c0s13b1n0.hsn.cm.polaris.alcf.anl.gov: rank 5 died from signal 15\
+x3111c0s13b1n0.hsn.cm.polaris.alcf.anl.gov: rank 4 died from signal 15\
+x3111c0s13b1n0.hsn.cm.polaris.alcf.anl.gov: rank 6 died from signal 15\
+Application 98ddbe85 resources: utime=0s stime=0s maxrss=8540KB inblock=2124 oublock=0 minflt=3524 majflt=11 nvcsw=1097 nivcsw=7\
+(2023-10-04) dd1868@x3111c0s13b0n0:~/wordplay/src/wordplay> \
+s=100 train.log_interval=5 train.compile=falsee train.backend=DDP train.max_iters\
+Connected to tcp://x3111c0s13b0n0.hsn.cm.polaris.alcf.anl.gov:7919\
+Found executable /home/dd1868/wordplay/venvs/polaris/2023-10-04/bin/python3\
+Launching application c43f80c2-ee19-4665-ba42-e34bd754c583\
+  File "__main__.py", line 7\
+    from __future__ import (\
+    ^\
+SyntaxError: future feature annotations is not defined\
+x3111c0s13b0n0.hsn.cm.polaris.alcf.anl.gov: rank 0 exited with code 1\
+x3111c0s13b0n0.hsn.cm.polaris.alcf.anl.gov: rank 1 died from signal 15\
+x3111c0s13b0n0.hsn.cm.polaris.alcf.anl.gov: rank 2 died from signal 15\
+x3111c0s13b0n0.hsn.cm.polaris.alcf.anl.gov: rank 3 died from signal 15\
+x3111c0s13b1n0.hsn.cm.polaris.alcf.anl.gov: rank 5 died from signal 15\
+x3111c0s13b1n0.hsn.cm.polaris.alcf.anl.gov: rank 6 died from signal 15\
+x3111c0s13b1n0.hsn.cm.polaris.alcf.anl.gov: rank 7 died from signal 15\
+x3111c0s13b1n0.hsn.cm.polaris.alcf.anl.gov: rank 4 died from signal 15\
+Application c43f80c2 resources: utime=0s stime=0s maxrss=10036KB inblock=518 oublock=0 minflt=4661 majflt=0 nvcsw=1033 nivcsw=5\
+(2023-10-04) dd1868@x3111c0s13b0n0:~/wordplay/src/wordplay> \
+\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\fs72 \cf2 \cb3 2nd Attempt: 
+\fs24 \cf4 \cb5 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf4 \
+dplay/src/wordplay> PS1="\\u@\\h:\\w\\$ "@x3111c0s13b0n0:~/wordplay/src/wordplay/word\
+dd1868@x3111c0s13b0n0:~/wordplay/src/wordplay/wordplay/src/wordplay$ \
+\\w\\$ "@x3111c0s13b0n0:~/wordplay/src/wordplay/wordplay/src/wordplay$ PS1="\\u@\\h:\\\
+dd1868@x3111c0s13b0n0:~/wordplay/src/wordplay/wordplay/src/wordplay$ \
+ conda/2023-10-04b0n0:~/wordplay/src/wordplay/wordplay/src/wordplay$ module load \
+ttps://github.com/saforem2/wordplayc/wordplay/wordplay/src/wordplay$ git clone ht\
+Cloning into 'wordplay'...\
+remote: Enumerating objects: 798, done.\
+remote: Counting objects: 100% (1/1), done.\
+remote: Total 798 (delta 0), reused 0 (delta 0), pack-reused 797\
+Receiving objects: 100% (798/798), 14.33 MiB | 46.00 MiB/s, done.\
+Resolving deltas: 100% (366/366), done.                                        y\
+..1868@x3111c0s13b0n0:~/wordplay/src/wordplay/wordplay/src/wordplay/wordplay$ cd \
+dd1868@x3111c0s13b0n0:~/wordplay/src/wordplay/wordplay/src/wordplay$ cd ..\
+dd1868@x3111c0s13b0n0:~/wordplay/src/wordplay/wordplay/src$ cd ..\
+dd1868@x3111c0s13b0n0:~/wordplay/src/wordplay/wordplay$ cd\
+dd1868@x3111c0s13b0n0:~$ module load conda/2023-10-04\
+dd1868@x3111c0s13b0n0:~$ git clone https://github.com/saforem2/wordplay\
+fatal: destination path 'wordplay' already exists and is not an empty directory.\
+dd1868@x3111c0s13b0n0:~$ cd wordplay\
+dd1868@x3111c0s13b0n0:~/wordplay$  mkdir -p venvs/polaris/2023-10-04\
+tem-site-packagesb0n0:~/wordplay$ python3 -m venv venvs/polaris/2023-10-04 --syst\
+dd1868@x3111c0s13b0n0:~/wordplay$ source venvs/polaris/2023-10-04/bin/activate\
+(2023-10-04) dd1868@x3111c0s13b0n0:~/wordplay> python3 -m pip install -e "."\
+Obtaining file:///home/dd1868/wordplay\
+  Installing build dependencies ... done\
+  Checking if build backend supports build_editable ... done\
+  Getting requirements to build editable ... done\
+  Preparing editable metadata (pyproject.toml) ... done\
+Collecting ambivalent@ git+https://github.com/saforem2/ambivalent\
+  Cloning https://github.com/saforem2/ambivalent to /var/tmp/pbs.1830994.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-install-a3f_rnp5/ambivalent_ca1f5cce646c4870858833523078bdb4\
+  Running command git clone --filter=blob:none -q https://github.com/saforem2/ambivalent /var/tmp/pbs.1830994.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-install-a3f_rnp5/ambivalent_ca1f5cce646c4870858833523078bdb4\
+  Resolved https://github.com/saforem2/ambivalent to commit e130acf2ae471b2a4768dcb48e680187ce6bb716\
+  Installing build dependencies ... done\
+  Getting requirements to build wheel ... done\
+  Preparing metadata (pyproject.toml) ... done\
+Collecting enrich@ git+https://github.com/saforem2/enrich\
+  Cloning https://github.com/saforem2/enrich to /var/tmp/pbs.1830994.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-install-a3f_rnp5/enrich_16a0856fc51543e9b688c78e640eceed\
+  Running command git clone --filter=blob:none -q https://github.com/saforem2/enrich /var/tmp/pbs.1830994.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-install-a3f_rnp5/enrich_16a0856fc51543e9b688c78e640eceed\
+  Resolved https://github.com/saforem2/enrich to commit 7bad3a1a5bb6205ae9526af93aef6e4078241016\
+  Installing build dependencies ... error\
+\cf6   ERROR: Command errored out with exit status 1:\cf4 \
+\cf6    command: /home/dd1868/wordplay/venvs/polaris/2023-10-04/bin/python3 /home/dd1868/wordplay/venvs/polaris/2023-10-04/lib64/python3.6/site-packages/pip install --ignore-installed --no-user --prefix /var/tmp/pbs.1830994.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-build-env-q5sk_qz9/overlay --no-warn-script-location --no-binary :none: --only-binary :none: -i https://pypi.org/simple -- 'setuptools >= 61.0' 'setuptools_scm[toml] >= 7.0.0'\cf4 \
+\cf6        cwd: None\cf4 \
+\cf6   Complete output (2 lines):\cf4 \
+\cf6   ERROR: Could not find a version that satisfies the requirement setuptools>=61.0 (from versions: 0.6b1, 0.6b2, 0.6b3, 0.6b4, 0.6rc1, 0.6rc2, 0.6rc3, 0.6rc4, 0.6rc5, 0.6rc6, 0.6rc7, 0.6rc8, 0.6rc9, 0.6rc10, 0.6rc11, 0.7.2, 0.7.3, 0.7.4, 0.7.5, 0.7.6, 0.7.7, 0.7.8, 0.8, 0.9, 0.9.1, 0.9.2, 0.9.3, 0.9.4, 0.9.5, 0.9.6, 0.9.7, 0.9.8, 1.0, 1.1, 1.1.1, 1.1.2, 1.1.3, 1.1.4, 1.1.5, 1.1.6, 1.1.7, 1.2, 1.3, 1.3.1, 1.3.2, 1.4, 1.4.1, 1.4.2, 2.0, 2.0.1, 2.0.2, 2.1, 2.1.1, 2.1.2, 2.2, 3.0, 3.0.1, 3.0.2, 3.1, 3.2, 3.3, 3.4, 3.4.1, 3.4.2, 3.4.3, 3.4.4, 3.5, 3.5.1, 3.5.2, 3.6, 3.7, 3.7.1, 3.8, 3.8.1, 4.0, 4.0.1, 5.0, 5.0.1, 5.0.2, 5.1, 5.2, 5.3, 5.4, 5.4.1, 5.4.2, 5.5, 5.5.1, 5.6, 5.7, 5.8, 6.0.1, 6.0.2, 6.1, 7.0, 8.0, 8.0.1, 8.0.2, 8.0.3, 8.0.4, 8.1, 8.2, 8.2.1, 8.3, 9.0, 9.0.1, 9.1, 10.0, 10.0.1, 10.1, 10.2, 10.2.1, 11.0, 11.1, 11.2, 11.3, 11.3.1, 12.0, 12.0.1, 12.0.2, 12.0.3, 12.0.4, 12.0.5, 12.1, 12.2, 12.3, 12.4, 13.0.1, 13.0.2, 14.0, 14.1, 14.1.1, 14.2, 14.3, 14.3.1, 15.0, 15.1, 15.2, 16.0, 17.0, 17.1, 17.1.1, 18.0, 18.0.1, 18.1, 18.2, 18.3, 18.3.1, 18.3.2, 18.4, 18.5, 18.6, 18.6.1, 18.7, 18.7.1, 18.8, 18.8.1, 19.0, 19.1, 19.1.1, 19.2, 19.3, 19.4, 19.4.1, 19.5, 19.6, 19.6.1, 19.6.2, 19.7, 20.0, 20.1, 20.1.1, 20.2.2, 20.3, 20.3.1, 20.4, 20.6.6, 20.6.7, 20.6.8, 20.7.0, 20.8.0, 20.8.1, 20.9.0, 20.10.1, 21.0.0, 21.1.0, 21.2.0, 21.2.1, 21.2.2, 22.0.0, 22.0.1, 22.0.2, 22.0.4, 22.0.5, 23.0.0, 23.1.0, 23.2.0, 23.2.1, 24.0.0, 24.0.1, 24.0.2, 24.0.3, 24.1.0, 24.1.1, 24.2.0, 24.2.1, 24.3.0, 24.3.1, 25.0.0, 25.0.1, 25.0.2, 25.1.0, 25.1.1, 25.1.2, 25.1.3, 25.1.4, 25.1.5, 25.1.6, 25.2.0, 25.3.0, 25.4.0, 26.0.0, 26.1.0, 26.1.1, 27.0.0, 27.1.0, 27.1.2, 27.2.0, 27.3.0, 27.3.1, 28.0.0, 28.1.0, 28.2.0, 28.3.0, 28.4.0, 28.5.0, 28.6.0, 28.6.1, 28.7.0, 28.7.1, 28.8.0, 28.8.1, 29.0.0, 29.0.1, 30.0.0, 30.1.0, 30.2.0, 30.2.1, 30.3.0, 30.4.0, 31.0.0, 31.0.1, 32.0.0, 32.1.0, 32.1.1, 32.1.2, 32.1.3, 32.2.0, 32.3.0, 32.3.1, 33.1.0, 33.1.1, 34.0.0, 34.0.1, 34.0.2, 34.0.3, 34.1.0, 34.1.1, 34.2.0, 34.3.0, 34.3.1, 34.3.2, 34.3.3, 34.4.0, 34.4.1, 35.0.0, 35.0.1, 35.0.2, 36.0.1, 36.1.0, 36.1.1, 36.2.0, 36.2.1, 36.2.2, 36.2.3, 36.2.4, 36.2.5, 36.2.6, 36.2.7, 36.3.0, 36.4.0, 36.5.0, 36.6.0, 36.6.1, 36.7.0, 36.7.1, 36.7.2, 36.8.0, 37.0.0, 38.0.0, 38.1.0, 38.2.0, 38.2.1, 38.2.3, 38.2.4, 38.2.5, 38.3.0, 38.4.0, 38.4.1, 38.5.0, 38.5.1, 38.5.2, 38.6.0, 38.6.1, 38.7.0, 39.0.0, 39.0.1, 39.1.0, 39.2.0, 40.0.0, 40.1.0, 40.1.1, 40.2.0, 40.3.0, 40.4.0, 40.4.1, 40.4.2, 40.4.3, 40.5.0, 40.6.0, 40.6.1, 40.6.2, 40.6.3, 40.7.0, 40.7.1, 40.7.2, 40.7.3, 40.8.0, 40.9.0, 41.0.0, 41.0.1, 41.1.0, 41.2.0, 41.3.0, 41.4.0, 41.5.0, 41.5.1, 41.6.0, 42.0.0, 42.0.1, 42.0.2, 43.0.0, 44.0.0, 44.1.0, 44.1.1, 45.0.0, 45.1.0, 45.2.0, 45.3.0, 46.0.0, 46.1.0, 46.1.1, 46.1.2, 46.1.3, 46.2.0, 46.3.0, 46.3.1, 46.4.0, 47.0.0, 47.1.0, 47.1.1, 47.2.0, 47.3.0, 47.3.1, 47.3.2, 48.0.0, 49.0.0, 49.0.1, 49.1.0, 49.1.1, 49.1.2, 49.1.3, 49.2.0, 49.2.1, 49.3.0, 49.3.1, 49.3.2, 49.4.0, 49.5.0, 49.6.0, 50.0.0, 50.0.1, 50.0.2, 50.0.3, 50.1.0, 50.2.0, 50.3.0, 50.3.1, 50.3.2, 51.0.0, 51.1.0, 51.1.0.post20201221, 51.1.1, 51.1.2, 51.2.0, 51.3.0, 51.3.1, 51.3.2, 51.3.3, 52.0.0, 53.0.0, 53.1.0, 54.0.0, 54.1.0, 54.1.1, 54.1.2, 54.1.3, 54.2.0, 56.0.0, 56.1.0, 56.2.0, 57.0.0, 57.1.0, 57.2.0, 57.3.0, 57.4.0, 57.5.0, 58.0.0, 58.0.1, 58.0.2, 58.0.3, 58.0.4, 58.1.0, 58.2.0, 58.3.0, 58.4.0, 58.5.0, 58.5.1, 58.5.2, 58.5.3, 59.0.1, 59.1.0, 59.1.1, 59.2.0, 59.3.0, 59.4.0, 59.5.0, 59.6.0)\cf4 \
+\cf6   ERROR: No matching distribution found for setuptools>=61.0\cf4 \
+\cf6   ----------------------------------------\cf4 \
+\cf7 WARNING: Discarding git+https://github.com/saforem2/enrich. Command errored out with exit status 1: /home/dd1868/wordplay/venvs/polaris/2023-10-04/bin/python3 /home/dd1868/wordplay/venvs/polaris/2023-10-04/lib64/python3.6/site-packages/pip install --ignore-installed --no-user --prefix /var/tmp/pbs.1830994.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-build-env-q5sk_qz9/overlay --no-warn-script-location --no-binary :none: --only-binary :none: -i https://pypi.org/simple -- 'setuptools >= 61.0' 'setuptools_scm[toml] >= 7.0.0' Check the logs for full command output.\cf4 \
+Collecting ezpz@ git+https://github.com/saforem2/ezpz\
+  Cloning https://github.com/saforem2/ezpz to /var/tmp/pbs.1830994.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-install-a3f_rnp5/ezpz_1dbfe7097130417b82981a6351269d2c\
+  Running command git clone --filter=blob:none -q https://github.com/saforem2/ezpz /var/tmp/pbs.1830994.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-install-a3f_rnp5/ezpz_1dbfe7097130417b82981a6351269d2c\
+  Resolved https://github.com/saforem2/ezpz to commit 33eac6d48ebe3194aadb242f3680f9985894be61\
+  Installing build dependencies ... done\
+  Getting requirements to build wheel ... done\
+  Preparing metadata (pyproject.toml) ... done\
+Collecting hydra-core\
+  Using cached hydra_core-1.3.2-py3-none-any.whl (154 kB)\
+\cf6 ERROR: Could not find a version that satisfies the requirement enrich (unavailable) (from wordplay) (from versions: 0.1.dev1, 1.0, 1.1, 1.2, 1.2.1, 1.2.2, 1.2.3, 1.2.4, 1.2.5, 1.2.6, 1.2.7)\cf4 \
+\cf6 ERROR: No matching distribution found for enrich (unavailable)\cf4 \
+rem2/ezpz04) dd1868@x3111c0s13b0n0:~/wordplay> git clone https://github.com/safor\
+fatal: destination path 'ezpz' already exists and is not an empty directory.\
+ev]"3-10-04) dd1868@x3111c0s13b0n0:~/wordplay> python3 -m pip install -e "ezpz[de\
+Obtaining file:///home/dd1868/wordplay/ezpz\
+  Installing build dependencies ... done\
+  Checking if build backend supports build_editable ... done\
+  Getting requirements to build editable ... done\
+  Preparing editable metadata (pyproject.toml) ... done\
+Collecting enrich@ git+https://github.com/saforem2/enrich\
+  Cloning https://github.com/saforem2/enrich to /var/tmp/pbs.1830994.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-install-azpfrf5b/enrich_08759e37769d42f38699e55e7f4f434c\
+  Running command git clone --filter=blob:none -q https://github.com/saforem2/enrich /var/tmp/pbs.1830994.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-install-azpfrf5b/enrich_08759e37769d42f38699e55e7f4f434c\
+  Resolved https://github.com/saforem2/enrich to commit 7bad3a1a5bb6205ae9526af93aef6e4078241016\
+  Installing build dependencies ... error\
+\cf6   ERROR: Command errored out with exit status 1:\cf4 \
+\cf6    command: /home/dd1868/wordplay/venvs/polaris/2023-10-04/bin/python3 /home/dd1868/wordplay/venvs/polaris/2023-10-04/lib64/python3.6/site-packages/pip install --ignore-installed --no-user --prefix /var/tmp/pbs.1830994.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-build-env-er9xdhll/overlay --no-warn-script-location --no-binary :none: --only-binary :none: -i https://pypi.org/simple -- 'setuptools >= 61.0' 'setuptools_scm[toml] >= 7.0.0'\cf4 \
+\cf6        cwd: None\cf4 \
+\cf6   Complete output (2 lines):\cf4 \
+\cf6   ERROR: Could not find a version that satisfies the requirement setuptools>=61.0 (from versions: 0.6b1, 0.6b2, 0.6b3, 0.6b4, 0.6rc1, 0.6rc2, 0.6rc3, 0.6rc4, 0.6rc5, 0.6rc6, 0.6rc7, 0.6rc8, 0.6rc9, 0.6rc10, 0.6rc11, 0.7.2, 0.7.3, 0.7.4, 0.7.5, 0.7.6, 0.7.7, 0.7.8, 0.8, 0.9, 0.9.1, 0.9.2, 0.9.3, 0.9.4, 0.9.5, 0.9.6, 0.9.7, 0.9.8, 1.0, 1.1, 1.1.1, 1.1.2, 1.1.3, 1.1.4, 1.1.5, 1.1.6, 1.1.7, 1.2, 1.3, 1.3.1, 1.3.2, 1.4, 1.4.1, 1.4.2, 2.0, 2.0.1, 2.0.2, 2.1, 2.1.1, 2.1.2, 2.2, 3.0, 3.0.1, 3.0.2, 3.1, 3.2, 3.3, 3.4, 3.4.1, 3.4.2, 3.4.3, 3.4.4, 3.5, 3.5.1, 3.5.2, 3.6, 3.7, 3.7.1, 3.8, 3.8.1, 4.0, 4.0.1, 5.0, 5.0.1, 5.0.2, 5.1, 5.2, 5.3, 5.4, 5.4.1, 5.4.2, 5.5, 5.5.1, 5.6, 5.7, 5.8, 6.0.1, 6.0.2, 6.1, 7.0, 8.0, 8.0.1, 8.0.2, 8.0.3, 8.0.4, 8.1, 8.2, 8.2.1, 8.3, 9.0, 9.0.1, 9.1, 10.0, 10.0.1, 10.1, 10.2, 10.2.1, 11.0, 11.1, 11.2, 11.3, 11.3.1, 12.0, 12.0.1, 12.0.2, 12.0.3, 12.0.4, 12.0.5, 12.1, 12.2, 12.3, 12.4, 13.0.1, 13.0.2, 14.0, 14.1, 14.1.1, 14.2, 14.3, 14.3.1, 15.0, 15.1, 15.2, 16.0, 17.0, 17.1, 17.1.1, 18.0, 18.0.1, 18.1, 18.2, 18.3, 18.3.1, 18.3.2, 18.4, 18.5, 18.6, 18.6.1, 18.7, 18.7.1, 18.8, 18.8.1, 19.0, 19.1, 19.1.1, 19.2, 19.3, 19.4, 19.4.1, 19.5, 19.6, 19.6.1, 19.6.2, 19.7, 20.0, 20.1, 20.1.1, 20.2.2, 20.3, 20.3.1, 20.4, 20.6.6, 20.6.7, 20.6.8, 20.7.0, 20.8.0, 20.8.1, 20.9.0, 20.10.1, 21.0.0, 21.1.0, 21.2.0, 21.2.1, 21.2.2, 22.0.0, 22.0.1, 22.0.2, 22.0.4, 22.0.5, 23.0.0, 23.1.0, 23.2.0, 23.2.1, 24.0.0, 24.0.1, 24.0.2, 24.0.3, 24.1.0, 24.1.1, 24.2.0, 24.2.1, 24.3.0, 24.3.1, 25.0.0, 25.0.1, 25.0.2, 25.1.0, 25.1.1, 25.1.2, 25.1.3, 25.1.4, 25.1.5, 25.1.6, 25.2.0, 25.3.0, 25.4.0, 26.0.0, 26.1.0, 26.1.1, 27.0.0, 27.1.0, 27.1.2, 27.2.0, 27.3.0, 27.3.1, 28.0.0, 28.1.0, 28.2.0, 28.3.0, 28.4.0, 28.5.0, 28.6.0, 28.6.1, 28.7.0, 28.7.1, 28.8.0, 28.8.1, 29.0.0, 29.0.1, 30.0.0, 30.1.0, 30.2.0, 30.2.1, 30.3.0, 30.4.0, 31.0.0, 31.0.1, 32.0.0, 32.1.0, 32.1.1, 32.1.2, 32.1.3, 32.2.0, 32.3.0, 32.3.1, 33.1.0, 33.1.1, 34.0.0, 34.0.1, 34.0.2, 34.0.3, 34.1.0, 34.1.1, 34.2.0, 34.3.0, 34.3.1, 34.3.2, 34.3.3, 34.4.0, 34.4.1, 35.0.0, 35.0.1, 35.0.2, 36.0.1, 36.1.0, 36.1.1, 36.2.0, 36.2.1, 36.2.2, 36.2.3, 36.2.4, 36.2.5, 36.2.6, 36.2.7, 36.3.0, 36.4.0, 36.5.0, 36.6.0, 36.6.1, 36.7.0, 36.7.1, 36.7.2, 36.8.0, 37.0.0, 38.0.0, 38.1.0, 38.2.0, 38.2.1, 38.2.3, 38.2.4, 38.2.5, 38.3.0, 38.4.0, 38.4.1, 38.5.0, 38.5.1, 38.5.2, 38.6.0, 38.6.1, 38.7.0, 39.0.0, 39.0.1, 39.1.0, 39.2.0, 40.0.0, 40.1.0, 40.1.1, 40.2.0, 40.3.0, 40.4.0, 40.4.1, 40.4.2, 40.4.3, 40.5.0, 40.6.0, 40.6.1, 40.6.2, 40.6.3, 40.7.0, 40.7.1, 40.7.2, 40.7.3, 40.8.0, 40.9.0, 41.0.0, 41.0.1, 41.1.0, 41.2.0, 41.3.0, 41.4.0, 41.5.0, 41.5.1, 41.6.0, 42.0.0, 42.0.1, 42.0.2, 43.0.0, 44.0.0, 44.1.0, 44.1.1, 45.0.0, 45.1.0, 45.2.0, 45.3.0, 46.0.0, 46.1.0, 46.1.1, 46.1.2, 46.1.3, 46.2.0, 46.3.0, 46.3.1, 46.4.0, 47.0.0, 47.1.0, 47.1.1, 47.2.0, 47.3.0, 47.3.1, 47.3.2, 48.0.0, 49.0.0, 49.0.1, 49.1.0, 49.1.1, 49.1.2, 49.1.3, 49.2.0, 49.2.1, 49.3.0, 49.3.1, 49.3.2, 49.4.0, 49.5.0, 49.6.0, 50.0.0, 50.0.1, 50.0.2, 50.0.3, 50.1.0, 50.2.0, 50.3.0, 50.3.1, 50.3.2, 51.0.0, 51.1.0, 51.1.0.post20201221, 51.1.1, 51.1.2, 51.2.0, 51.3.0, 51.3.1, 51.3.2, 51.3.3, 52.0.0, 53.0.0, 53.1.0, 54.0.0, 54.1.0, 54.1.1, 54.1.2, 54.1.3, 54.2.0, 56.0.0, 56.1.0, 56.2.0, 57.0.0, 57.1.0, 57.2.0, 57.3.0, 57.4.0, 57.5.0, 58.0.0, 58.0.1, 58.0.2, 58.0.3, 58.0.4, 58.1.0, 58.2.0, 58.3.0, 58.4.0, 58.5.0, 58.5.1, 58.5.2, 58.5.3, 59.0.1, 59.1.0, 59.1.1, 59.2.0, 59.3.0, 59.4.0, 59.5.0, 59.6.0)\cf4 \
+\cf6   ERROR: No matching distribution found for setuptools>=61.0\cf4 \
+\cf6   ----------------------------------------\cf4 \
+\cf7 WARNING: Discarding git+https://github.com/saforem2/enrich. Command errored out with exit status 1: /home/dd1868/wordplay/venvs/polaris/2023-10-04/bin/python3 /home/dd1868/wordplay/venvs/polaris/2023-10-04/lib64/python3.6/site-packages/pip install --ignore-installed --no-user --prefix /var/tmp/pbs.1830994.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-build-env-er9xdhll/overlay --no-warn-script-location --no-binary :none: --only-binary :none: -i https://pypi.org/simple -- 'setuptools >= 61.0' 'setuptools_scm[toml] >= 7.0.0' Check the logs for full command output.\cf4 \
+Collecting ambivalent@ git+https://github.com/saforem2/ambivalent\
+  Cloning https://github.com/saforem2/ambivalent to /var/tmp/pbs.1830994.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-install-azpfrf5b/ambivalent_3a5b4b7d97dd4016a4d7cdb5b18a1645\
+  Running command git clone --filter=blob:none -q https://github.com/saforem2/ambivalent /var/tmp/pbs.1830994.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-install-azpfrf5b/ambivalent_3a5b4b7d97dd4016a4d7cdb5b18a1645\
+  Resolved https://github.com/saforem2/ambivalent to commit e130acf2ae471b2a4768dcb48e680187ce6bb716\
+source ezpz/src/ezpz/bin/savejobenv > /tmp/savejobenv.log 2>&1  Installing build dependencies ... done\
+  Getting requirements to build wheel ... done\
+  Preparing metadata (pyproject.toml) ... done\
+Collecting xarray\
+  Downloading xarray-0.16.2-py3-none-any.whl (736 kB)\
+     |\uc0\u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 \u9608 | 736 kB 7.0 MB/s            \
+\cf6 ERROR: Could not find a version that satisfies the requirement enrich (unavailable) (from ezpz[dev]) (from versions: 0.1.dev1, 1.0, 1.1, 1.2, 1.2.1, 1.2.2, 1.2.3, 1.2.4, 1.2.5, 1.2.6, 1.2.7)\cf4 \
+\cf6 ERROR: No matching distribution found for enrich (unavailable)\cf4 \
+nv > /tmp/savejobenv.log 2>&13b0n0:~/wordplay> source ezpz/src/ezpz/bin/savejoben\
+v2023-10-04) dd1868@x3111c0s13b0n0:~/wordplay> source ezpz/src/ezpz/bin/getjobenv\
+\uc0\u9484 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \
+\uc0\u9474  [Hosts]: \
+\uc0\u9474      \'95 [host:0] - \cf8 x3111c0s13b0n0.hsn.cm.polaris.alcf.anl.gov\cf4 \
+\uc0\u9474      \'95 [host:1] - \cf8 x3111c0s13b1n0.hsn.cm.polaris.alcf.anl.gov\cf4 \
+\uc0\u9492 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \
+\uc0\u9484 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \
+\uc0\u9474  [DIST INFO]: \
+\uc0\u9474      \'95 Loading job env from: /home/dd1868/.pbsenv\
+\uc0\u9474      \'95 HOSTFILE: /var/spool/pbs/aux/1830994.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov\
+\uc0\u9474      \'95 NHOSTS: 2\
+\uc0\u9474      \'95 NGPU_PER_HOST: 4\
+\uc0\u9474      \'95 NGPUS (NHOSTS x NGPU_PER_HOST): 8\
+\uc0\u9474      \'95 \cf6 WORLD_SIZE\cf4 : \cf9 8\cf4 \
+\uc0\u9474      \'95 DIST_LAUNCH: \cf7 mpiexec --verbose --envall -n 8 -ppn 4 --hostfile /var/spool/pbs/aux/1830994.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov\cf4 \
+\uc0\u9492 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \
+\uc0\u9484 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \
+\uc0\u9474  [Launch]:\
+\uc0\u9474      \'95 Use: '\cf10 launch\cf4 ' (=\cf10 mpiexec --verbose --envall -n 8 -ppn 4 --hostfile /var/spool/pbs/aux/1830994.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov\cf4 )\
+\uc0\u9474        to launch job\
+\uc0\u9492 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \
+epare.py-04) dd1868@x3111c0s13b0n0:~/wordplay>  python3 data/shakespeare_char/pre\
+  File "data/shakespeare_char/prepare.py", line 7\
+    from __future__ import absolute_import, annotations, division, print_function\
+    ^\
+SyntaxError: future feature annotations is not defined\
+(2023-10-04) dd1868@x3111c0s13b0n0:~/wordplay> \
+\
+\
+                                               cd src/wordplay\
+(2023-10-04) dd1868@x3111c0s13b0n0:~/wordplay/src/wordplay> 6KB inblock=428 oublock=0 minflt=5376 majflt=0 nvcsw=998 nivcsw=6\
+\
+
+\fs72 \cf11 \cb12 3rd Attempt: 
+\fs24 \cf4 \cb5 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf4 \
+Last login: Wed Apr 10 02:01:57 2024 from c-76-110-54-215.hsd1.fl.comcast.net\
+dd1868@polaris-login-01:~> qsme\
+If 'qsme' is not a typo you can use command-not-found to lookup the package that contains it, like this:\
+    cnf qsme\
+dd1868@polaris-login-01:~> qsub -A ALCFAITP -q debug -l select=2 -l walltime=01:00:00,filesystems=eagle:home -I\
+qsub: waiting for job 1831012.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov to start\
+qsub: job 1831012.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov ready\
+\
+dd1868@x3111c0s13b0n0:~> module load conda/2023-10-04 ; conda activate base\
+\
+Lmod is automatically replacing "nvhpc/22.11" with "gcc/12.2.0".\
+\
+\
+Lmod is automatically replacing "PrgEnv-nvhpc/8.3.3" with "PrgEnv-gnu/8.3.3".\
+\
+\
+Due to MODULEPATH changes, the following have been reloaded:\
+  1) cray-mpich/8.1.25\
+\
+(2023-10-04/base) dd1868@x3111c0s13b0n0:~> git clone https://github.com/saforem2/wordplay\
+fatal: destination path 'wordplay' already exists and is not an empty directory.\
+(2023-10-04/base) dd1868@x3111c0s13b0n0:~> cd wordplay\
+(2023-10-04/base) dd1868@x3111c0s13b0n0:~/wordplay> mkdir -p venvs/polaris/2023-10-04\
+(2023-10-04/base) dd1868@x3111c0s13b0n0:~/wordplay> python3 -m venv venvs/polaris/2023-10-04 --system-site-packages\
+(2023-10-04/base) dd1868@x3111c0s13b0n0:~/wordplay> source venvs/polaris/2023-10-04/bin/activate\
+(2023-10-04) (2023-10-04/base) dd1868@x3111c0s13b0n0:~/wordplay> python3 -m pip install -e "."\
+Obtaining file:///home/dd1868/wordplay\
+  Installing build dependencies ... done\
+  Checking if build backend supports build_editable ... done\
+  Getting requirements to build editable ... done\
+  Preparing editable metadata (pyproject.toml) ... done\
+Collecting enrich@ git+https://github.com/saforem2/enrich\
+  Cloning https://github.com/saforem2/enrich to /var/tmp/pbs.1831012.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-install-c17doozn/enrich_da3726d6796e4bd2b5cfb9bb213d6306\
+  Running command git clone --filter=blob:none -q https://github.com/saforem2/enrich /var/tmp/pbs.1831012.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-install-c17doozn/enrich_da3726d6796e4bd2b5cfb9bb213d6306\
+  Resolved https://github.com/saforem2/enrich to commit 7bad3a1a5bb6205ae9526af93aef6e4078241016\
+  Installing build dependencies ... error\
+\cf6   ERROR: Command errored out with exit status 1:\cf4 \
+\cf6    command: /home/dd1868/wordplay/venvs/polaris/2023-10-04/bin/python3 /home/dd1868/wordplay/venvs/polaris/2023-10-04/lib64/python3.6/site-packages/pip install --ignore-installed --no-user --prefix /var/tmp/pbs.1831012.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-build-env-zs07rbv6/overlay --no-warn-script-location --no-binary :none: --only-binary :none: -i https://pypi.org/simple -- 'setuptools >= 61.0' 'setuptools_scm[toml] >= 7.0.0'\cf4 \
+\cf6        cwd: None\cf4 \
+\cf6   Complete output (2 lines):\cf4 \
+\cf6   ERROR: Could not find a version that satisfies the requirement setuptools>=61.0 (from versions: 0.6b1, 0.6b2, 0.6b3, 0.6b4, 0.6rc1, 0.6rc2, 0.6rc3, 0.6rc4, 0.6rc5, 0.6rc6, 0.6rc7, 0.6rc8, 0.6rc9, 0.6rc10, 0.6rc11, 0.7.2, 0.7.3, 0.7.4, 0.7.5, 0.7.6, 0.7.7, 0.7.8, 0.8, 0.9, 0.9.1, 0.9.2, 0.9.3, 0.9.4, 0.9.5, 0.9.6, 0.9.7, 0.9.8, 1.0, 1.1, 1.1.1, 1.1.2, 1.1.3, 1.1.4, 1.1.5, 1.1.6, 1.1.7, 1.2, 1.3, 1.3.1, 1.3.2, 1.4, 1.4.1, 1.4.2, 2.0, 2.0.1, 2.0.2, 2.1, 2.1.1, 2.1.2, 2.2, 3.0, 3.0.1, 3.0.2, 3.1, 3.2, 3.3, 3.4, 3.4.1, 3.4.2, 3.4.3, 3.4.4, 3.5, 3.5.1, 3.5.2, 3.6, 3.7, 3.7.1, 3.8, 3.8.1, 4.0, 4.0.1, 5.0, 5.0.1, 5.0.2, 5.1, 5.2, 5.3, 5.4, 5.4.1, 5.4.2, 5.5, 5.5.1, 5.6, 5.7, 5.8, 6.0.1, 6.0.2, 6.1, 7.0, 8.0, 8.0.1, 8.0.2, 8.0.3, 8.0.4, 8.1, 8.2, 8.2.1, 8.3, 9.0, 9.0.1, 9.1, 10.0, 10.0.1, 10.1, 10.2, 10.2.1, 11.0, 11.1, 11.2, 11.3, 11.3.1, 12.0, 12.0.1, 12.0.2, 12.0.3, 12.0.4, 12.0.5, 12.1, 12.2, 12.3, 12.4, 13.0.1, 13.0.2, 14.0, 14.1, 14.1.1, 14.2, 14.3, 14.3.1, 15.0, 15.1, 15.2, 16.0, 17.0, 17.1, 17.1.1, 18.0, 18.0.1, 18.1, 18.2, 18.3, 18.3.1, 18.3.2, 18.4, 18.5, 18.6, 18.6.1, 18.7, 18.7.1, 18.8, 18.8.1, 19.0, 19.1, 19.1.1, 19.2, 19.3, 19.4, 19.4.1, 19.5, 19.6, 19.6.1, 19.6.2, 19.7, 20.0, 20.1, 20.1.1, 20.2.2, 20.3, 20.3.1, 20.4, 20.6.6, 20.6.7, 20.6.8, 20.7.0, 20.8.0, 20.8.1, 20.9.0, 20.10.1, 21.0.0, 21.1.0, 21.2.0, 21.2.1, 21.2.2, 22.0.0, 22.0.1, 22.0.2, 22.0.4, 22.0.5, 23.0.0, 23.1.0, 23.2.0, 23.2.1, 24.0.0, 24.0.1, 24.0.2, 24.0.3, 24.1.0, 24.1.1, 24.2.0, 24.2.1, 24.3.0, 24.3.1, 25.0.0, 25.0.1, 25.0.2, 25.1.0, 25.1.1, 25.1.2, 25.1.3, 25.1.4, 25.1.5, 25.1.6, 25.2.0, 25.3.0, 25.4.0, 26.0.0, 26.1.0, 26.1.1, 27.0.0, 27.1.0, 27.1.2, 27.2.0, 27.3.0, 27.3.1, 28.0.0, 28.1.0, 28.2.0, 28.3.0, 28.4.0, 28.5.0, 28.6.0, 28.6.1, 28.7.0, 28.7.1, 28.8.0, 28.8.1, 29.0.0, 29.0.1, 30.0.0, 30.1.0, 30.2.0, 30.2.1, 30.3.0, 30.4.0, 31.0.0, 31.0.1, 32.0.0, 32.1.0, 32.1.1, 32.1.2, 32.1.3, 32.2.0, 32.3.0, 32.3.1, 33.1.0, 33.1.1, 34.0.0, 34.0.1, 34.0.2, 34.0.3, 34.1.0, 34.1.1, 34.2.0, 34.3.0, 34.3.1, 34.3.2, 34.3.3, 34.4.0, 34.4.1, 35.0.0, 35.0.1, 35.0.2, 36.0.1, 36.1.0, 36.1.1, 36.2.0, 36.2.1, 36.2.2, 36.2.3, 36.2.4, 36.2.5, 36.2.6, 36.2.7, 36.3.0, 36.4.0, 36.5.0, 36.6.0, 36.6.1, 36.7.0, 36.7.1, 36.7.2, 36.8.0, 37.0.0, 38.0.0, 38.1.0, 38.2.0, 38.2.1, 38.2.3, 38.2.4, 38.2.5, 38.3.0, 38.4.0, 38.4.1, 38.5.0, 38.5.1, 38.5.2, 38.6.0, 38.6.1, 38.7.0, 39.0.0, 39.0.1, 39.1.0, 39.2.0, 40.0.0, 40.1.0, 40.1.1, 40.2.0, 40.3.0, 40.4.0, 40.4.1, 40.4.2, 40.4.3, 40.5.0, 40.6.0, 40.6.1, 40.6.2, 40.6.3, 40.7.0, 40.7.1, 40.7.2, 40.7.3, 40.8.0, 40.9.0, 41.0.0, 41.0.1, 41.1.0, 41.2.0, 41.3.0, 41.4.0, 41.5.0, 41.5.1, 41.6.0, 42.0.0, 42.0.1, 42.0.2, 43.0.0, 44.0.0, 44.1.0, 44.1.1, 45.0.0, 45.1.0, 45.2.0, 45.3.0, 46.0.0, 46.1.0, 46.1.1, 46.1.2, 46.1.3, 46.2.0, 46.3.0, 46.3.1, 46.4.0, 47.0.0, 47.1.0, 47.1.1, 47.2.0, 47.3.0, 47.3.1, 47.3.2, 48.0.0, 49.0.0, 49.0.1, 49.1.0, 49.1.1, 49.1.2, 49.1.3, 49.2.0, 49.2.1, 49.3.0, 49.3.1, 49.3.2, 49.4.0, 49.5.0, 49.6.0, 50.0.0, 50.0.1, 50.0.2, 50.0.3, 50.1.0, 50.2.0, 50.3.0, 50.3.1, 50.3.2, 51.0.0, 51.1.0, 51.1.0.post20201221, 51.1.1, 51.1.2, 51.2.0, 51.3.0, 51.3.1, 51.3.2, 51.3.3, 52.0.0, 53.0.0, 53.1.0, 54.0.0, 54.1.0, 54.1.1, 54.1.2, 54.1.3, 54.2.0, 56.0.0, 56.1.0, 56.2.0, 57.0.0, 57.1.0, 57.2.0, 57.3.0, 57.4.0, 57.5.0, 58.0.0, 58.0.1, 58.0.2, 58.0.3, 58.0.4, 58.1.0, 58.2.0, 58.3.0, 58.4.0, 58.5.0, 58.5.1, 58.5.2, 58.5.3, 59.0.1, 59.1.0, 59.1.1, 59.2.0, 59.3.0, 59.4.0, 59.5.0, 59.6.0)\cf4 \
+\cf6   ERROR: No matching distribution found for setuptools>=61.0\cf4 \
+\cf6   ----------------------------------------\cf4 \
+\cf7 WARNING: Discarding git+https://github.com/saforem2/enrich. Command errored out with exit status 1: /home/dd1868/wordplay/venvs/polaris/2023-10-04/bin/python3 /home/dd1868/wordplay/venvs/polaris/2023-10-04/lib64/python3.6/site-packages/pip install --ignore-installed --no-user --prefix /var/tmp/pbs.1831012.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-build-env-zs07rbv6/overlay --no-warn-script-location --no-binary :none: --only-binary :none: -i https://pypi.org/simple -- 'setuptools >= 61.0' 'setuptools_scm[toml] >= 7.0.0' Check the logs for full command output.\cf4 \
+Collecting ambivalent@ git+https://github.com/saforem2/ambivalent\
+  Cloning https://github.com/saforem2/ambivalent to /var/tmp/pbs.1831012.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-install-c17doozn/ambivalent_6248507b10d640839962bda9fbf8262a\
+  Running command git clone --filter=blob:none -q https://github.com/saforem2/ambivalent /var/tmp/pbs.1831012.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-install-c17doozn/ambivalent_6248507b10d640839962bda9fbf8262a\
+  Resolved https://github.com/saforem2/ambivalent to commit e130acf2ae471b2a4768dcb48e680187ce6bb716\
+  Installing build dependencies ... done\
+  Getting requirements to build wheel ... done\
+  Preparing metadata (pyproject.toml) ... done\
+Collecting ezpz@ git+https://github.com/saforem2/ezpz\
+  Cloning https://github.com/saforem2/ezpz to /var/tmp/pbs.1831012.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-install-c17doozn/ezpz_398bf1b1545d43cfb89a167f3bfe7e0a\
+  Running command git clone --filter=blob:none -q https://github.com/saforem2/ezpz /var/tmp/pbs.1831012.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-install-c17doozn/ezpz_398bf1b1545d43cfb89a167f3bfe7e0a\
+  Resolved https://github.com/saforem2/ezpz to commit 33eac6d48ebe3194aadb242f3680f9985894be61\
+  Installing build dependencies ... done\
+  Getting requirements to build wheel ... done\
+  Preparing metadata (pyproject.toml) ... done\
+Collecting datasets\
+  Using cached datasets-2.4.0-py3-none-any.whl (365 kB)\
+\cf6 ERROR: Could not find a version that satisfies the requirement enrich (unavailable) (from wordplay) (from versions: 0.1.dev1, 1.0, 1.1, 1.2, 1.2.1, 1.2.2, 1.2.3, 1.2.4, 1.2.5, 1.2.6, 1.2.7)\cf4 \
+\cf6 ERROR: No matching distribution found for enrich (unavailable)\cf4 \
+(2023-10-04) (2023-10-04/base) dd1868@x3111c0s13b0n0:~/wordplay> git clone https://github.com/saforem2/ezpz\
+fatal: destination path 'ezpz' already exists and is not an empty directory.\
+(2023-10-04) (2023-10-04/base) dd1868@x3111c0s13b0n0:~/wordplay> python3 -m pip install -e "ezpz[dev]"\
+Obtaining file:///home/dd1868/wordplay/ezpz\
+  Installing build dependencies ... done\
+  Checking if build backend supports build_editable ... done\
+  Getting requirements to build editable ... done\
+  Preparing editable metadata (pyproject.toml) ... done\
+Collecting enrich@ git+https://github.com/saforem2/enrich\
+  Cloning https://github.com/saforem2/enrich to /var/tmp/pbs.1831012.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-install-xr2t6ro1/enrich_db878bc136d34ca38adc29c807349fc3\
+  Running command git clone --filter=blob:none -q https://github.com/saforem2/enrich /var/tmp/pbs.1831012.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-install-xr2t6ro1/enrich_db878bc136d34ca38adc29c807349fc3\
+  Resolved https://github.com/saforem2/enrich to commit 7bad3a1a5bb6205ae9526af93aef6e4078241016\
+  Installing build dependencies ... error\
+\cf6   ERROR: Command errored out with exit status 1:\cf4 \
+\cf6    command: /home/dd1868/wordplay/venvs/polaris/2023-10-04/bin/python3 /home/dd1868/wordplay/venvs/polaris/2023-10-04/lib64/python3.6/site-packages/pip install --ignore-installed --no-user --prefix /var/tmp/pbs.1831012.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-build-env-qmf1v04t/overlay --no-warn-script-location --no-binary :none: --only-binary :none: -i https://pypi.org/simple -- 'setuptools >= 61.0' 'setuptools_scm[toml] >= 7.0.0'\cf4 \
+\cf6        cwd: None\cf4 \
+\cf6   Complete output (2 lines):\cf4 \
+\cf6   ERROR: Could not find a version that satisfies the requirement setuptools>=61.0 (from versions: 0.6b1, 0.6b2, 0.6b3, 0.6b4, 0.6rc1, 0.6rc2, 0.6rc3, 0.6rc4, 0.6rc5, 0.6rc6, 0.6rc7, 0.6rc8, 0.6rc9, 0.6rc10, 0.6rc11, 0.7.2, 0.7.3, 0.7.4, 0.7.5, 0.7.6, 0.7.7, 0.7.8, 0.8, 0.9, 0.9.1, 0.9.2, 0.9.3, 0.9.4, 0.9.5, 0.9.6, 0.9.7, 0.9.8, 1.0, 1.1, 1.1.1, 1.1.2, 1.1.3, 1.1.4, 1.1.5, 1.1.6, 1.1.7, 1.2, 1.3, 1.3.1, 1.3.2, 1.4, 1.4.1, 1.4.2, 2.0, 2.0.1, 2.0.2, 2.1, 2.1.1, 2.1.2, 2.2, 3.0, 3.0.1, 3.0.2, 3.1, 3.2, 3.3, 3.4, 3.4.1, 3.4.2, 3.4.3, 3.4.4, 3.5, 3.5.1, 3.5.2, 3.6, 3.7, 3.7.1, 3.8, 3.8.1, 4.0, 4.0.1, 5.0, 5.0.1, 5.0.2, 5.1, 5.2, 5.3, 5.4, 5.4.1, 5.4.2, 5.5, 5.5.1, 5.6, 5.7, 5.8, 6.0.1, 6.0.2, 6.1, 7.0, 8.0, 8.0.1, 8.0.2, 8.0.3, 8.0.4, 8.1, 8.2, 8.2.1, 8.3, 9.0, 9.0.1, 9.1, 10.0, 10.0.1, 10.1, 10.2, 10.2.1, 11.0, 11.1, 11.2, 11.3, 11.3.1, 12.0, 12.0.1, 12.0.2, 12.0.3, 12.0.4, 12.0.5, 12.1, 12.2, 12.3, 12.4, 13.0.1, 13.0.2, 14.0, 14.1, 14.1.1, 14.2, 14.3, 14.3.1, 15.0, 15.1, 15.2, 16.0, 17.0, 17.1, 17.1.1, 18.0, 18.0.1, 18.1, 18.2, 18.3, 18.3.1, 18.3.2, 18.4, 18.5, 18.6, 18.6.1, 18.7, 18.7.1, 18.8, 18.8.1, 19.0, 19.1, 19.1.1, 19.2, 19.3, 19.4, 19.4.1, 19.5, 19.6, 19.6.1, 19.6.2, 19.7, 20.0, 20.1, 20.1.1, 20.2.2, 20.3, 20.3.1, 20.4, 20.6.6, 20.6.7, 20.6.8, 20.7.0, 20.8.0, 20.8.1, 20.9.0, 20.10.1, 21.0.0, 21.1.0, 21.2.0, 21.2.1, 21.2.2, 22.0.0, 22.0.1, 22.0.2, 22.0.4, 22.0.5, 23.0.0, 23.1.0, 23.2.0, 23.2.1, 24.0.0, 24.0.1, 24.0.2, 24.0.3, 24.1.0, 24.1.1, 24.2.0, 24.2.1, 24.3.0, 24.3.1, 25.0.0, 25.0.1, 25.0.2, 25.1.0, 25.1.1, 25.1.2, 25.1.3, 25.1.4, 25.1.5, 25.1.6, 25.2.0, 25.3.0, 25.4.0, 26.0.0, 26.1.0, 26.1.1, 27.0.0, 27.1.0, 27.1.2, 27.2.0, 27.3.0, 27.3.1, 28.0.0, 28.1.0, 28.2.0, 28.3.0, 28.4.0, 28.5.0, 28.6.0, 28.6.1, 28.7.0, 28.7.1, 28.8.0, 28.8.1, 29.0.0, 29.0.1, 30.0.0, 30.1.0, 30.2.0, 30.2.1, 30.3.0, 30.4.0, 31.0.0, 31.0.1, 32.0.0, 32.1.0, 32.1.1, 32.1.2, 32.1.3, 32.2.0, 32.3.0, 32.3.1, 33.1.0, 33.1.1, 34.0.0, 34.0.1, 34.0.2, 34.0.3, 34.1.0, 34.1.1, 34.2.0, 34.3.0, 34.3.1, 34.3.2, 34.3.3, 34.4.0, 34.4.1, 35.0.0, 35.0.1, 35.0.2, 36.0.1, 36.1.0, 36.1.1, 36.2.0, 36.2.1, 36.2.2, 36.2.3, 36.2.4, 36.2.5, 36.2.6, 36.2.7, 36.3.0, 36.4.0, 36.5.0, 36.6.0, 36.6.1, 36.7.0, 36.7.1, 36.7.2, 36.8.0, 37.0.0, 38.0.0, 38.1.0, 38.2.0, 38.2.1, 38.2.3, 38.2.4, 38.2.5, 38.3.0, 38.4.0, 38.4.1, 38.5.0, 38.5.1, 38.5.2, 38.6.0, 38.6.1, 38.7.0, 39.0.0, 39.0.1, 39.1.0, 39.2.0, 40.0.0, 40.1.0, 40.1.1, 40.2.0, 40.3.0, 40.4.0, 40.4.1, 40.4.2, 40.4.3, 40.5.0, 40.6.0, 40.6.1, 40.6.2, 40.6.3, 40.7.0, 40.7.1, 40.7.2, 40.7.3, 40.8.0, 40.9.0, 41.0.0, 41.0.1, 41.1.0, 41.2.0, 41.3.0, 41.4.0, 41.5.0, 41.5.1, 41.6.0, 42.0.0, 42.0.1, 42.0.2, 43.0.0, 44.0.0, 44.1.0, 44.1.1, 45.0.0, 45.1.0, 45.2.0, 45.3.0, 46.0.0, 46.1.0, 46.1.1, 46.1.2, 46.1.3, 46.2.0, 46.3.0, 46.3.1, 46.4.0, 47.0.0, 47.1.0, 47.1.1, 47.2.0, 47.3.0, 47.3.1, 47.3.2, 48.0.0, 49.0.0, 49.0.1, 49.1.0, 49.1.1, 49.1.2, 49.1.3, 49.2.0, 49.2.1, 49.3.0, 49.3.1, 49.3.2, 49.4.0, 49.5.0, 49.6.0, 50.0.0, 50.0.1, 50.0.2, 50.0.3, 50.1.0, 50.2.0, 50.3.0, 50.3.1, 50.3.2, 51.0.0, 51.1.0, 51.1.0.post20201221, 51.1.1, 51.1.2, 51.2.0, 51.3.0, 51.3.1, 51.3.2, 51.3.3, 52.0.0, 53.0.0, 53.1.0, 54.0.0, 54.1.0, 54.1.1, 54.1.2, 54.1.3, 54.2.0, 56.0.0, 56.1.0, 56.2.0, 57.0.0, 57.1.0, 57.2.0, 57.3.0, 57.4.0, 57.5.0, 58.0.0, 58.0.1, 58.0.2, 58.0.3, 58.0.4, 58.1.0, 58.2.0, 58.3.0, 58.4.0, 58.5.0, 58.5.1, 58.5.2, 58.5.3, 59.0.1, 59.1.0, 59.1.1, 59.2.0, 59.3.0, 59.4.0, 59.5.0, 59.6.0)\cf4 \
+\cf6   ERROR: No matching distribution found for setuptools>=61.0\cf4 \
+\cf6   ----------------------------------------\cf4 \
+\cf7 WARNING: Discarding git+https://github.com/saforem2/enrich. Command errored out with exit status 1: /home/dd1868/wordplay/venvs/polaris/2023-10-04/bin/python3 /home/dd1868/wordplay/venvs/polaris/2023-10-04/lib64/python3.6/site-packages/pip install --ignore-installed --no-user --prefix /var/tmp/pbs.1831012.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-build-env-qmf1v04t/overlay --no-warn-script-location --no-binary :none: --only-binary :none: -i https://pypi.org/simple -- 'setuptools >= 61.0' 'setuptools_scm[toml] >= 7.0.0' Check the logs for full command output.\cf4 \
+Collecting ambivalent@ git+https://github.com/saforem2/ambivalent\
+  Cloning https://github.com/saforem2/ambivalent to /var/tmp/pbs.1831012.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-install-xr2t6ro1/ambivalent_5494797e61a14d9aa934924ade8fb5f5\
+  Running command git clone --filter=blob:none -q https://github.com/saforem2/ambivalent /var/tmp/pbs.1831012.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov/pip-install-xr2t6ro1/ambivalent_5494797e61a14d9aa934924ade8fb5f5\
+  Resolved https://github.com/saforem2/ambivalent to commit e130acf2ae471b2a4768dcb48e680187ce6bb716\
+  Installing build dependencies ... done\
+  Getting requirements to build wheel ... done\
+  Preparing metadata (pyproject.toml) ... done\
+\cf6 ERROR: Could not find a version that satisfies the requirement enrich (unavailable) (from ezpz[dev]) (from versions: 0.1.dev1, 1.0, 1.1, 1.2, 1.2.1, 1.2.2, 1.2.3, 1.2.4, 1.2.5, 1.2.6, 1.2.7)\cf4 \
+\cf6 ERROR: No matching distribution found for enrich (unavailable)\cf4 \
+(2023-10-04) (2023-10-04/base) dd1868@x3111c0s13b0n0:~/wordplay> source ezpz/src/ezpz/bin/savejobenv > /tmp/savejobenv.log 2>&1  # |\
+(2023-10-04) (2023-10-04/base) dd1868@x3111c0s13b0n0:~/wordplay> source ezpz/src/ezpz/bin/getjobenv  # || exit\
+\uc0\u9484 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \
+\uc0\u9474  [Hosts]: \
+\uc0\u9474      \'95 [host:0] - \cf8 x3111c0s13b0n0.hsn.cm.polaris.alcf.anl.gov\cf4 \
+\uc0\u9474      \'95 [host:1] - \cf8 x3111c0s13b1n0.hsn.cm.polaris.alcf.anl.gov\cf4 \
+\uc0\u9492 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \
+\uc0\u9484 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \
+\uc0\u9474  [DIST INFO]: \
+\uc0\u9474      \'95 Loading job env from: /home/dd1868/.pbsenv\
+\uc0\u9474      \'95 HOSTFILE: /var/spool/pbs/aux/1831012.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov\
+\uc0\u9474      \'95 NHOSTS: 2\
+\uc0\u9474      \'95 NGPU_PER_HOST: 4\
+\uc0\u9474      \'95 NGPUS (NHOSTS x NGPU_PER_HOST): 8\
+\uc0\u9474      \'95 \cf6 WORLD_SIZE\cf4 : \cf9 8\cf4 \
+\uc0\u9474      \'95 DIST_LAUNCH: \cf7 mpiexec --verbose --envall -n 8 -ppn 4 --hostfile /var/spool/pbs/aux/1831012.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov\cf4 \
+\uc0\u9492 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \
+\uc0\u9484 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \
+\uc0\u9474  [Launch]:\
+\uc0\u9474      \'95 Use: '\cf10 launch\cf4 ' (=\cf10 mpiexec --verbose --envall -n 8 -ppn 4 --hostfile /var/spool/pbs/aux/1831012.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov\cf4 )\
+\uc0\u9474        to launch job\
+\uc0\u9492 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \
+(2023-10-04) (2023-10-04/base) dd1868@x3111c0s13b0n0:~/wordplay> python3 data/shakespeare_char/prepare.py\
+  File "data/shakespeare_char/prepare.py", line 7\
+    from __future__ import absolute_import, annotations, division, print_function\
+    ^\
+SyntaxError: future feature annotations is not defined\
+(2023-10-04) (2023-10-04/base) dd1868@x3111c0s13b0n0:~/wordplay> cd src/wordplay\
+(2023-10-04) (2023-10-04/base) dd1868@x3111c0s13b0n0:~/wordplay/src/wordplay> launch python3 __main__.py +experiment=shakespeare data=shakespeare train.backend=DDP train.max_iters=100 train.log_interval=5 train.compile=false\
+Connected to tcp://x3111c0s13b0n0.hsn.cm.polaris.alcf.anl.gov:7919\
+Found executable /home/dd1868/wordplay/venvs/polaris/2023-10-04/bin/python3\
+Launching application fe9c1e42-ad6b-4a3d-8203-a853c90c8214\
+  File "__main__.py", line 7\
+    from __future__ import (\
+    ^\
+SyntaxError: future feature annotations is not defined\
+x3111c0s13b0n0.hsn.cm.polaris.alcf.anl.gov: rank 0 exited with code 1\
+x3111c0s13b0n0.hsn.cm.polaris.alcf.anl.gov: rank 1 died from signal 15\
+x3111c0s13b0n0.hsn.cm.polaris.alcf.anl.gov: rank 3 died from signal 15\
+x3111c0s13b0n0.hsn.cm.polaris.alcf.anl.gov: rank 2 died from signal 15\
+x3111c0s13b1n0.hsn.cm.polaris.alcf.anl.gov: rank 4 died from signal 15\
+x3111c0s13b1n0.hsn.cm.polaris.alcf.anl.gov: rank 5 died from signal 15\
+x3111c0s13b1n0.hsn.cm.polaris.alcf.anl.gov: rank 6 died from signal 15\
+x3111c0s13b1n0.hsn.cm.polaris.alcf.anl.gov: rank 7 died from signal 15\
+Application fe9c1e42 resources: utime=0s stime=0s maxrss=8520KB inblock=0 oublock=0 minflt=3387 majflt=0 nvcsw=900 nivcsw=4\
+(2023-10-04) (2023-10-04/base) dd1868@x3111c0s13b0n0:~/wordplay/src/wordplay> \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf13 \cb14 \
+}
